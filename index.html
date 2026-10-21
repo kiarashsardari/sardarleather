@@ -3,15 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>چرم سرداری | محصولات چرمی دست‌ساز الیگودرز</title>
+<title>چرم سرداری | خرید کیف و کمربند چرم دست‌ساز الیگودرز</title>
 
 <!-- ═══════════════════════════════════════════════════════════
-     قبل از انتشار عمومی:
-     1. در همه‌ی تگ‌های https://sardarleather.netlify.app/
-        دامنه‌ی واقعی خود را بگذارید
-     2. فایل images/og-cover.jpg را با یک عکس ۱۲۰۰×۶۳۰ بسازید
-     3. robots.txt و sitemap.xml را در ریشه قرار دهید
-     4. برای امنیت کامل، فایل _headers در Netlify بسازید:
+     اقدامات لازم قبل از انتشار عمومی:
+     
+     1. جایگزینی دامنه:
+        همه‌ی https://sardarleather.netlify.app/ را با دامنه‌ی واقعی
+        عوض کنید (canonical, og:url, og:image, twitter:image, hreflang, JSON-LD)
+     
+     2. ساخت فایل‌های جانبی:
+        • images/og-cover.jpg  (۱۲۰۰×۶۳۰)  — پیش‌نمایش اشتراک
+        • images/logo.png      (۵۱۲×۵۱۲)   — لوگو برای Knowledge Panel
+        • images/products/1.jpg تا 15.jpg  (۸۰۰×۸۰۰) — عکس محصولات
+     
+     3. فایل‌های ریشه:
+        • robots.txt
+        • sitemap.xml
+     
+     4. تأیید در موتورهای جستجو:
+        در search.google.com/search-console بعد از ثبت، تگ زیر را در <head> قرار دهید:
+        <meta name="google-site-verification" content="YOUR_CODE_HERE">
+        و در bing.com/webmasters:
+        <meta name="msvalidate.01" content="YOUR_CODE_HERE">
+     
+     5. امنیت (فایل _headers در Netlify):
         /*
           Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'
           X-Content-Type-Options: nosniff
@@ -20,15 +36,34 @@
      ═══════════════════════════════════════════════════════════ -->
 
 <meta name="description" content="چرم سرداری، کارگاه چرم دست‌ساز در الیگودرز — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت با چرم طبیعی و دوخت دستی. تولید مستقیم، بدون واسطه، ارسال به سراسر کشور. سفارش از طریق روبیکا، واتساپ و پیامک.">
-<meta name="keywords" content="چرم دست‌ساز, کیف چرم, کمربند چرم, کیف پول چرم, جاکارتی چرم, قاب گوشی چرم, دسته ساعت چرم, چرم سرداری, الیگودرز, چرم طبیعی">
+<meta name="keywords" content="چرم دست‌ساز, کیف چرم, کمربند چرم, کیف پول چرم, جاکارتی چرم, قاب گوشی چرم, دسته ساعت چرم, چرم سرداری, الیگودرز, چرم طبیعی, خرید کیف چرم, خرید کمربند چرم">
 <meta name="author" content="چرم سرداری">
-<meta name="theme-color" content="#40260f" id="metaThemeColor">
-<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#40260f">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="format-detection" content="telephone=no">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="canonical" href="https://sardarleather.netlify.app/">
+<meta name="rating" content="general">
 
+<!-- Canonical + Language alternates -->
+<link rel="canonical" href="https://sardarleather.netlify.app/">
+<link rel="alternate" hreflang="fa" href="https://sardarleather.netlify.app/">
+<link rel="alternate" hreflang="fa-IR" href="https://sardarleather.netlify.app/">
+<link rel="alternate" hreflang="x-default" href="https://sardarleather.netlify.app/">
+
+<!-- Sitemap discovery -->
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://sardarleather.netlify.app/sitemap.xml">
+
+<!-- Social verification -->
+<link rel="me" href="https://instagram.com/sardarleather">
+
+<!-- Geo / Local SEO signals -->
+<meta name="geo.region" content="IR-15">
+<meta name="geo.placename" content="الیگودرز، لرستان">
+<meta name="geo.position" content="33.4009;49.6949">
+<meta name="ICBM" content="33.4009, 49.6949">
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="چرم سرداری | محصولات چرمی دست‌ساز الیگودرز">
 <meta property="og:description" content="چرم طبیعی، دست‌دوز، مطابق سلیقه شما — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت. ارسال به سراسر کشور.">
@@ -42,6 +77,7 @@
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:alt" content="چرم سرداری — محصولات چرمی دست‌ساز">
 
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="چرم سرداری | محصولات چرمی دست‌ساز الیگودرز">
 <meta name="twitter:description" content="چرم طبیعی، دست‌دوز، مطابق سلیقه شما — ارسال به سراسر کشور.">
@@ -61,10 +97,12 @@
   "alternateName": "Sardar Leather Workshop",
   "slogan": "چرم طبیعی، دست‌دوز، مطابق سلیقه شما",
   "description": "کارگاه چرم دست‌ساز در الیگودرز — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت با چرم طبیعی و دوخت دستی. تولید مستقیم، بدون واسطه، ارسال به سراسر کشور.",
-  "telephone": "+989165197630",
-  "priceRange": "1000000-3500000 IRR",
+  "telephone": "+989384920926",
+  "priceRange": "180000-3200000 IRR",
   "url": "https://sardarleather.netlify.app/",
   "image": ["https://sardarleather.netlify.app/images/og-cover.jpg"],
+  "logo": "https://sardarleather.netlify.app/images/logo.png",
+  "foundingDate": "2020",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "خیابان امام خمینی، پاساژ سینا، طبقه پایین",
@@ -72,9 +110,32 @@
     "addressRegion": "لرستان",
     "addressCountry": "IR"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.4009,
+    "longitude": 49.6949
+  },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=33.4009,49.6949",
   "areaServed": { "@type": "Country", "name": "ایران" },
   "currenciesAccepted": "IRR",
   "paymentAccepted": "نقدی، کارت به کارت",
+  "knowsAbout": [
+    "چرم دست‌دوز",
+    "کیف چرم",
+    "کمربند چرم",
+    "کیف پول چرم",
+    "جاکارتی چرم",
+    "قاب گوشی چرم",
+    "دسته ساعت چرم",
+    "هنرهای دستی"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+989384920926",
+    "contactType": "customer service",
+    "availableLanguage": ["fa"],
+    "areaServed": "IR"
+  },
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
@@ -83,8 +144,8 @@
   }],
   "sameAs": [
     "https://instagram.com/sardarleather",
-    "https://web.rubika.ir/#c=u0GVW5L0374e567a45252238397ca2ee",
-    "https://wa.me/989165197630"
+    "https://web.rubika.ir/#c=u0Re9B0f2d13ce18c468aa343b2fa757",
+    "https://wa.me/989384920926"
   ]
 }
 </script>
@@ -105,71 +166,47 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "SiteNavigationElement",
+  "@id": "https://sardarleather.netlify.app/#nav",
+  "name": ["خانه","دسته‌بندی","محصولات","ثبت سفارش","درباره ما","تماس با ما"],
+  "url": [
+    "https://sardarleather.netlify.app/#home",
+    "https://sardarleather.netlify.app/#categories",
+    "https://sardarleather.netlify.app/#products",
+    "https://sardarleather.netlify.app/#order",
+    "https://sardarleather.netlify.app/#about",
+    "https://sardarleather.netlify.app/#contact"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "محصولات چرم سرداری",
   "numberOfItems": 15,
   "itemListElement": [
-    {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"کیف دستی چرم طبیعی","category":"کیف","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"2850000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"کمربند چرم دست‌دوز","category":"کمربند","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"890000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"کیف پول چرم مردانه","category":"کیف پول","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"650000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"جاکارتی چرم","category":"جاکارتی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"320000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"قاب گوشی چرم","category":"قاب گوشی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"480000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"دسته ساعت چرم","category":"دسته ساعت","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"390000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"کیف دوشی چرم","category":"کیف","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"1950000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"کمربند چرم زنانه","category":"کمربند","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"780000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":9,"item":{"@type":"Product","name":"کیف پول چرم زنانه","category":"کیف پول","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"720000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":10,"item":{"@type":"Product","name":"قاب گوشی چرم مدل رول","category":"قاب گوشی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"540000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":11,"item":{"@type":"Product","name":"کیف لپ‌تاپ چرم","category":"کیف","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"3200000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":12,"item":{"@type":"Product","name":"دسته ساعت چرم دوخت‌دار","category":"دسته ساعت","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"450000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":13,"item":{"@type":"Product","name":"جاکلیدی چرم","category":"سایر","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"180000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":14,"item":{"@type":"Product","name":"کارت ویزیت چرمی","category":"سایر","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"250000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":15,"item":{"@type":"Product","name":"بند عینک چرم","category":"سایر","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"220000","priceCurrency":"IRR","availability":"https://schema.org/InStock","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}}
+    {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"کیف دستی چرم طبیعی","category":"کیف","sku":"SL-001","description":"کیف دستی دست‌دوز از چرم طبیعی با دوخت کاملاً دستی، مناسب استفاده روزمره","image":"https://sardarleather.netlify.app/images/products/1.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"2850000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"کمربند چرم دست‌دوز","category":"کمربند","sku":"SL-002","description":"کمربند چرم دست‌دوز با دوخت کاملاً دستی و سگک مقاوم","image":"https://sardarleather.netlify.app/images/products/2.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"890000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"کیف پول چرم مردانه","category":"کیف پول","sku":"SL-003","description":"کیف پول چرم مردانه با طراحی ساده و کاربردی، جای کارت و اسکناس","image":"https://sardarleather.netlify.app/images/products/3.jpg","material":"چرم طبیعی","audience":{"@type":"PeopleAudience","suggestedGender":"Male"},"brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"650000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"جاکارتی چرم","category":"جاکارتی","sku":"SL-004","description":"جاکارتی چرمی دست‌دوز برای نگهداری کارت‌های بانکی و شناسایی","image":"https://sardarleather.netlify.app/images/products/4.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"320000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"قاب گوشی چرم","category":"قاب گوشی","sku":"SL-005","description":"قاب گوشی چرمی دست‌ساز، محافظ شیک برای گوشی شما","image":"https://sardarleather.netlify.app/images/products/5.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"480000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"دسته ساعت چرم","category":"دسته ساعت","sku":"SL-006","description":"دسته ساعت چرم دست‌دوز، مناسب ساعت‌های کلاسیک","image":"https://sardarleather.netlify.app/images/products/6.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"390000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"کیف دوشی چرم","category":"کیف","sku":"SL-007","description":"کیف دوشی چرم با بند قابل تنظیم و فضای داخلی مناسب","image":"https://sardarleather.netlify.app/images/products/7.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"1950000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"کمربند چرم زنانه","category":"کمربند","sku":"SL-008","description":"کمربند چرم زنانه دست‌دوز با طراحی ظریف","image":"https://sardarleather.netlify.app/images/products/8.jpg","material":"چرم طبیعی","audience":{"@type":"PeopleAudience","suggestedGender":"Female"},"brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"780000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":9,"item":{"@type":"Product","name":"کیف پول چرم زنانه","category":"کیف پول","sku":"SL-009","description":"کیف پول چرم زنانه با طراحی شیک و جیب متعدد","image":"https://sardarleather.netlify.app/images/products/9.jpg","material":"چرم طبیعی","audience":{"@type":"PeopleAudience","suggestedGender":"Female"},"brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"720000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":10,"item":{"@type":"Product","name":"قاب گوشی چرم مدل رول","category":"قاب گوشی","sku":"SL-010","description":"قاب گوشی چرم مدل رول دست‌ساز با پوشش کامل","image":"https://sardarleather.netlify.app/images/products/10.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"540000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":11,"item":{"@type":"Product","name":"کیف لپ‌تاپ چرم","category":"کیف","sku":"SL-011","description":"کیف لپ‌تاپ چرم با محافظ داخلی و بند شانه‌ای","image":"https://sardarleather.netlify.app/images/products/11.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"3200000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":12,"item":{"@type":"Product","name":"دسته ساعت چرم دوخت‌دار","category":"دسته ساعت","sku":"SL-012","description":"دسته ساعت چرم دوخت‌دار با دوخت زیگزاگ دست‌ساز","image":"https://sardarleather.netlify.app/images/products/12.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"450000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":13,"item":{"@type":"Product","name":"جاکلیدی چرم","category":"سایر","sku":"SL-013","description":"جاکلیدی چرم دست‌ساز با حلقه فلزی مقاوم","image":"https://sardarleather.netlify.app/images/products/13.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"180000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":14,"item":{"@type":"Product","name":"کارت ویزیت چرمی","category":"سایر","sku":"SL-014","description":"جاکارتی کارت ویزیت چرمی، مناسب هدیه تجاری","image":"https://sardarleather.netlify.app/images/products/14.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"250000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
+    {"@type":"ListItem","position":15,"item":{"@type":"Product","name":"بند عینک چرم","category":"سایر","sku":"SL-015","description":"بند عینک چرم دست‌ساز، نگه‌دارنده شیک عینک","image":"https://sardarleather.netlify.app/images/products/15.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"220000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}}
   ]
 }
 </script>
 
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
-
-<!-- ═══════════════════════════════════════════════════════════
-     Theme init — runs before CSS applies to prevent FOUC
-     
-     ✅ حالت خودکار بر اساس ساعت:
-        • اگر کاربر قبلاً دستی انتخاب کرده → همان انتخاب حفظ می‌شود
-        • در غیر این صورت → ساعت محلی کاربر بررسی می‌شود
-        • ساعت‌های تاریکی قابل تنظیم در SARDAR_THEME_CONFIG
-     ═══════════════════════════════════════════════════════════ -->
-<script>
-(function(){
-  window.SARDAR_THEME_CONFIG = { darkStart: 19, darkEnd: 6 };
-
-  var t = 'light';
-  try {
-    var cfg = window.SARDAR_THEME_CONFIG;
-    var hour = new Date().getHours();
-    var isDarkTime = (hour >= cfg.darkStart || hour < cfg.darkEnd);
-    var autoTheme = isDarkTime ? 'dark' : 'light';
-
-    var saved = null;
-    try { saved = localStorage.getItem('sardar_theme'); } catch(e){}
-
-    if(saved === 'dark' || saved === 'light') {
-      t = saved;
-    } else {
-      t = autoTheme;
-    }
-  } catch(e) {
-    try {
-      if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        t = 'dark';
-      }
-    } catch(e2){}
-  }
-
-  document.documentElement.setAttribute('data-theme', t);
-  var meta = document.getElementById('metaThemeColor');
-  if(meta) meta.setAttribute('content', t === 'dark' ? '#15110d' : '#40260f');
-})();
-</script>
 
 <style>
   :root{
@@ -554,259 +591,207 @@
       scroll-behavior:auto!important;
     }
   }
+/* ═══════════════════════════════════════════════════════════
+   FAQ ACCORDION — ANIMATED
+   ═══════════════════════════════════════════════════════════ */
+.faq-section{
+  padding:80px 0;
+  background:var(--cream);
+  border-top:1px solid var(--line);
+}
+.faq-list{
+  max-width:760px;
+  margin:0 auto;
+  display:grid;
+  gap:12px;
+}
+.faq-item{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  transition:border-color .25s ease,box-shadow .25s ease;
+}
+.faq-item:hover{
+  border-color:#d8c4a6;
+}
+.faq-item[open]{
+  border-color:var(--leather);
+  box-shadow:0 6px 24px rgba(64,38,15,.08);
+}
+.faq-summary{
+  padding:18px 22px;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  list-style:none;
+  font-weight:700;
+  color:#7a4a2b;
+  font-size:.98rem;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  transition:color .2s;
+}
+.faq-summary:hover{color:#5a3820}
+.faq-summary::-webkit-details-marker{display:none}
+.faq-summary::marker{content:''}
+.faq-summary:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:-2px;
+  border-radius:14px;
+}
+.faq-arrow{
+  flex-shrink:0;
+  color:var(--gold);
+  transition:transform .4s cubic-bezier(.4,0,.2,1);
+}
+.faq-item[open] .faq-arrow{
+  transform:rotate(180deg);
+}
+.faq-content{
+  overflow:hidden;
+  height:0;
+  opacity:0;
+  transition:height .4s cubic-bezier(.4,0,.2,1),opacity .3s ease;
+}
+.faq-item[open] .faq-content{
+  height:auto;
+  opacity:1;
+}
+.faq-content p{
+  margin:0;
+  padding:0 22px 20px;
+  color:#7a4a2b;
+  opacity:.68;
+  line-height:1.95;
+  font-size:.92rem;
+  font-weight:400;
+}
+.faq-content strong{
+  color:#7a4a2b;
+  font-weight:600;
+}
+.faq-content a{
+  color:#7a4a2b;
+  font-weight:600;
+  text-decoration:none;
+  border-bottom:1px None #7a4a2b;
+  opacity:.85;
+  transition:color .2s, border-color .2s, opacity .2s;
+}
+.faq-content a:hover{
+  color:var(--gold);
+  border-bottom-color:var(--gold);
+  opacity:1;
+}
+/* ═══════════════════════════════════════════════════════════
+   DRAWER — GPU ACCELERATION & SMOOTHNESS
+   ═══════════════════════════════════════════════════════════ */
+.drawer{
+  will-change:transform;
+  transform:translate3d(-100%,0,0);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  contain:layout paint;
+}
+.drawer.open{
+  transform:translate3d(0,0,0);
+}
 
-  /* ═══════════════════════════════════════════════════════════
-     THEME TOGGLE BUTTON
-     ═══════════════════════════════════════════════════════════ */
-  .theme-toggle{
-    display:grid;
-    place-items:center;
-    position:relative;
-    width:40px;
-    height:40px;
-    border-radius:10px;
-    background:#efe4d2;
-    color:var(--leather-dark);
-    transition:background .2s;
-    flex-shrink:0;
+.overlay{
+  will-change:opacity;
+}
+
+@media(max-width:520px){
+  .faq-section{padding:56px 0}
+  .faq-summary{padding:16px 18px;font-size:.92rem}
+  .faq-content p{padding:0 18px 16px;font-size:.88rem}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .faq-content,
+  .faq-arrow,
+  .drawer,
+  .overlay{
+    transition-duration:.01ms!important;
   }
-  .theme-toggle:hover{background:#e3d3bb}
-  .theme-toggle:active{transform:scale(.94)}
-  .theme-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-  .theme-toggle svg{
-    grid-area:1 / 1;
-    transition:opacity .25s ease, transform .35s ease;
-  }
-  .theme-toggle .icon-moon{opacity:1;transform:rotate(0)}
-  .theme-toggle .icon-sun{opacity:0;transform:rotate(-30deg)}
-  [data-theme="dark"] .theme-toggle{background:#2a2018;color:var(--ink)}
-  [data-theme="dark"] .theme-toggle:hover{background:#3a2e22}
-  [data-theme="dark"] .theme-toggle .icon-moon{opacity:0;transform:rotate(30deg)}
-  [data-theme="dark"] .theme-toggle .icon-sun{opacity:1;transform:rotate(0)}
-
-  @media(max-width:360px){
-    .theme-toggle{width:34px;height:34px}
-    .nav-actions{gap:6px}
-    .cart-btn{padding:8px 10px}
-    .burger{padding:8px}
-  }
-
-  /* ═══════════════════════════════════════════════════════════
-     DARK MODE OVERRIDES
-     ═══════════════════════════════════════════════════════════ */
-
-  [data-theme="dark"]{
-    --cream:#15110d;
-    --paper:#1f1811;
-    --leather:#c08b5a;
-    --leather-dark:#f2e8db;
-    --ink:#f2e8db;
-    --muted:#a89580;
-    --gold:#d4a15e;
-    --line:#3a2e22;
-    color-scheme: dark;
-  }
-  [data-theme="light"]{color-scheme:light}
-  html[data-theme="dark"]{background:#15110d}
-  html[data-theme="dark"] body{background:#15110d}
-  [data-theme="dark"] ::selection{background:rgba(212,161,94,.35);color:#f2e8db}
-
-  /* Header */
-  [data-theme="dark"] header{background:rgba(20,16,12,.94)}
-  [data-theme="dark"] .menu-list a{color:#d4c6b4;border-bottom-color:rgba(58,46,34,.5)}
-  [data-theme="dark"] .menu-list a:hover{background:#2a2018;color:var(--ink)}
-
-  /* Invert primary buttons (were dark-bg-light-text, become light-bg-dark-text) */
-  [data-theme="dark"] .cart-btn,
-  [data-theme="dark"] .btn-primary,
-  [data-theme="dark"] .menu-list a.hot,
-  [data-theme="dark"] .step-num,
-  [data-theme="dark"] .qty-ctrl,
-  [data-theme="dark"] .btn-call,
-  [data-theme="dark"] .checkout-submit{
-    background:#f2e8db;
-    color:#15110d;
-  }
-  [data-theme="dark"] .cart-btn:hover,
-  [data-theme="dark"] .btn-primary:hover,
-  [data-theme="dark"] .menu-list a.hot:hover,
-  [data-theme="dark"] .btn-call:hover,
-  [data-theme="dark"] .checkout-submit:hover{
-    background:#e8d8c4;
-    color:#15110d;
-  }
-  [data-theme="dark"] .btn-primary{box-shadow:0 8px 22px rgba(0,0,0,.4)}
-  [data-theme="dark"] .qty-ctrl{box-shadow:0 4px 12px rgba(0,0,0,.4)}
-  [data-theme="dark"] .qty-ctrl button{color:#15110d}
-  [data-theme="dark"] .qty-ctrl button:hover{background:rgba(21,17,13,.12)}
-
-  /* Badges: dark text on gold for contrast */
-  [data-theme="dark"] .cart-count{color:#15110d}
-  [data-theme="dark"] .card-img .cart-badge{color:#15110d}
-
-  /* Burger & backdrop */
-  [data-theme="dark"] .burger{background:#2a2018;color:var(--ink)}
-  [data-theme="dark"] .burger:hover{background:#3a2e22}
-  [data-theme="dark"] .menu-backdrop{background:rgba(0,0,0,.6)}
-
-  /* Hero */
-  [data-theme="dark"] .badge{background:#3a2e22;color:var(--ink)}
-  [data-theme="dark"] .leather-disc{
-    background:
-      radial-gradient(circle at 32% 30%,rgba(255,255,255,.08),transparent 42%),
-      radial-gradient(circle at 70% 75%,rgba(0,0,0,.4),transparent 52%),
-      linear-gradient(140deg,#6a4425,#2e1d10);
-    box-shadow:inset 0 0 0 2px rgba(242,232,219,.06),0 30px 70px rgba(0,0,0,.5);
-  }
-  [data-theme="dark"] .leather-disc::after{border-color:rgba(242,232,219,.18)}
-  [data-theme="dark"] .float-tag{box-shadow:0 10px 30px rgba(0,0,0,.4)}
-
-  /* Ghost button */
-  [data-theme="dark"] .btn-ghost{border-color:#4a3a2a;color:var(--ink)}
-  [data-theme="dark"] .btn-ghost:hover{background:#2a2018;border-color:var(--leather)}
-
-  /* Filters */
-  [data-theme="dark"] .filter{border-color:#4a3a2a;color:#b5a390}
-  [data-theme="dark"] .filter:hover{border-color:var(--leather)}
-  [data-theme="dark"] .filter.active{background:#f2e8db;border-color:#f2e8db;color:#15110d}
-
-  /* Cards */
-  [data-theme="dark"] .card:hover{border-color:#6b5033;box-shadow:0 18px 40px rgba(0,0,0,.5)}
-  [data-theme="dark"] .card-img{
-    background:
-      radial-gradient(circle at 30% 28%,rgba(255,255,255,.06),transparent 45%),
-      radial-gradient(circle at 72% 78%,rgba(0,0,0,.35),transparent 55%),
-      linear-gradient(140deg,#4a2f1a,#1a1008);
-  }
-  [data-theme="dark"] .card-img::after{border-color:rgba(242,232,219,.14)}
-
-  /* Add button */
-  [data-theme="dark"] .add{background:#3a2e22;color:var(--ink)}
-  [data-theme="dark"] .add:hover{background:#4a3a2a;border-color:#6b5033}
-
-  /* Note box (purple) */
-  [data-theme="dark"] .note-box{background:rgba(147,51,234,.14);border-color:rgba(147,51,234,.35)}
-  [data-theme="dark"] .note-box p,
-  [data-theme="dark"] .note-box b{color:#cbaae5}
-
-  /* Order section */
-  [data-theme="dark"] .order-section{background:linear-gradient(135deg,#1a1410,#2a1f15)}
-  [data-theme="dark"] .order-box h2{color:#f2e8db}
-  [data-theme="dark"] .order-box > p{color:#b5a390}
-  [data-theme="dark"] .order-box .tag{background:rgba(212,161,94,.22);color:#e0b676}
-
-  /* Order form inputs */
-  [data-theme="dark"] .order-form{background:rgba(0,0,0,.25);border-color:rgba(242,232,219,.1)}
-  [data-theme="dark"] .order-form label{color:#d4c6b4}
-  [data-theme="dark"] .order-form input,
-  [data-theme="dark"] .order-form select,
-  [data-theme="dark"] .order-form textarea{background:#1a1410;color:var(--ink);border-color:#3a2e22}
-  [data-theme="dark"] .order-form input:focus,
-  [data-theme="dark"] .order-form select:focus,
-  [data-theme="dark"] .order-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,161,94,.25)}
-  [data-theme="dark"] .order-form input::placeholder,
-  [data-theme="dark"] .order-form textarea::placeholder{color:#6b5847}
-
-  /* Form note */
-  [data-theme="dark"] .form-note{background:rgba(242,232,219,.06);border-color:rgba(242,232,219,.2)}
-  [data-theme="dark"] .form-note p{color:#b5a390}
-  [data-theme="dark"] .form-note svg,
-  [data-theme="dark"] .form-note b{color:#e0b676}
-
-  /* Fallback */
-  [data-theme="dark"] .form-fallback{background:rgba(242,232,219,.06);border-color:rgba(242,232,219,.2)}
-  [data-theme="dark"] .form-fallback p{color:#b5a390}
-  [data-theme="dark"] .fb-btn{background:#2a2018;color:var(--ink)}
-  [data-theme="dark"] .fb-btn:hover{background:#3a2e22}
-
-  /* Separators */
-  [data-theme="dark"] .or,
-  [data-theme="dark"] .or-alt{color:#8a7868}
-  [data-theme="dark"] .or::before,
-  [data-theme="dark"] .or::after,
-  [data-theme="dark"] .or-alt::before,
-  [data-theme="dark"] .or-alt::after{background:rgba(242,232,219,.15)}
-
-  /* Call-big */
-  [data-theme="dark"] .call-big{background:rgba(242,232,219,.95);color:#15110d}
-  [data-theme="dark"] .call-big:hover{background:#f2e8db}
-
-  /* About */
-  [data-theme="dark"] .about-art{
-    background:
-      radial-gradient(circle at 25% 25%,rgba(255,255,255,.06),transparent 45%),
-      linear-gradient(140deg,#4a2f1a,#1a1008);
-  }
-  [data-theme="dark"] .about p{color:#b5a390}
-  [data-theme="dark"] .about li i{background:#3a2e22}
-
-  /* Contact icons */
-  [data-theme="dark"] .cbox .ico{background:#3a2e22}
-
-  /* Footer */
-  [data-theme="dark"] footer{background:#0f0c08;color:#b5a390}
-  [data-theme="dark"] footer p{color:#b5a390}
-  [data-theme="dark"] footer li a{color:#b5a390}
-  [data-theme="dark"] footer li a:hover{color:var(--gold)}
-  [data-theme="dark"] .copyright{color:#7a6b5c;border-color:rgba(242,232,219,.1)}
-
-  /* Drawer */
-  [data-theme="dark"] .drawer{box-shadow:20px 0 60px rgba(0,0,0,.6)}
-  [data-theme="dark"] .close-x{background:#3a2e22;color:var(--ink)}
-  [data-theme="dark"] .close-x:hover{background:#4a3a2a}
-  [data-theme="dark"] .ci-img{background:linear-gradient(140deg,#4a2f1a,#1e140a)}
-  [data-theme="dark"] .ci-qty{background:#2a2018}
-  [data-theme="dark"] .ci-qty button:hover{background:#3a2e22}
-  [data-theme="dark"] .trash-btn{background:rgba(220,110,100,.15);color:#e07870}
-  [data-theme="dark"] .trash-btn:hover{background:rgba(220,110,100,.25)}
-  [data-theme="dark"] .drawer-foot{background:#1a1410}
-  [data-theme="dark"] .drawer-hint{background:rgba(147,51,234,.16);border-color:rgba(147,51,234,.35)}
-  [data-theme="dark"] .drawer-hint p,
-  [data-theme="dark"] .drawer-hint b{color:#cbaae5}
-
-  /* Checkout modal */
-  [data-theme="dark"] .checkout-modal{background:rgba(0,0,0,.75)}
-  [data-theme="dark"] .checkout-box{box-shadow:0 30px 80px rgba(0,0,0,.7)}
-  [data-theme="dark"] .checkout-close{background:#3a2e22;color:var(--ink)}
-  [data-theme="dark"] .checkout-close:hover{background:#4a3a2a}
-  [data-theme="dark"] .checkout-form input{background:#1a1410;color:var(--ink);border-color:#3a2e22}
-  [data-theme="dark"] .checkout-form input::placeholder{color:#6b5847}
-  [data-theme="dark"] .checkout-form input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,161,94,.25)}
-  [data-theme="dark"] .checkout-ico{box-shadow:0 8px 20px rgba(0,0,0,.5)}
-
-  /* Autofill fix (browser yellow bg is unreadable in dark) */
-  [data-theme="dark"] input:-webkit-autofill,
-  [data-theme="dark"] input:-webkit-autofill:hover,
-  [data-theme="dark"] input:-webkit-autofill:focus{
-    -webkit-text-fill-color:#f2e8db;
-    -webkit-box-shadow:0 0 0 1000px #1a1410 inset;
-    transition:background-color 5000s ease-in-out 0s;
-  }
-
-  /* Toast & skip */
-  [data-theme="dark"] .toast{background:#f2e8db;color:#15110d}
-  [data-theme="dark"] .skip-link{background:#f2e8db;color:#15110d}
-
-  /* Noscript */
-  [data-theme="dark"] noscript div{background:#3a2e22 !important;color:#f2e8db !important}
-  [data-theme="dark"] noscript a{color:var(--gold) !important}
-
-  /* Mobile menu extras */
-  [data-theme="dark"] .menu-header{background:linear-gradient(135deg,#1f1811,#2a2018);border-color:var(--line)}
-  [data-theme="dark"] .menu-foot{background:#1a1410;border-color:var(--line)}
-  [data-theme="dark"] .menu-quick a{background:#2a2018;color:var(--ink)}
-  [data-theme="dark"] .menu-quick a:hover{background:#f2e8db;color:#15110d}
-
-  /* Smooth transition on toggle (respects reduced-motion) */
-  @media(prefers-reduced-motion: no-preference){
-    html.theme-transitioning,
-    html.theme-transitioning *,
-    html.theme-transitioning *::before,
-    html.theme-transitioning *::after{
-      transition:background-color .3s ease,color .3s ease,border-color .3s ease,box-shadow .3s ease!important;
-    }
-  }
+}
 </style>
+
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+
+<!-- Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"خانه","item":"https://sardarleather.netlify.app/"},
+    {"@type":"ListItem","position":2,"name":"محصولات","item":"https://sardarleather.netlify.app/#products"},
+    {"@type":"ListItem","position":3,"name":"ثبت سفارش","item":"https://sardarleather.netlify.app/#order"}
+  ]
+}
+</script>
+
+<!-- HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "چطور از چرم سرداری سفارش دهیم؟",
+  "description": "چهار قدم ساده تا رسیدن محصول چرمی دست‌ساز به دست شما",
+  "totalTime": "PT5M",
+  "estimatedCost": {"@type":"MonetaryAmount","currency":"IRR","value":"180000"},
+  "step": [
+    {"@type":"HowToStep","position":1,"name":"محصولات را ببینید","text":"گالری محصولات را مرور کنید و طرح‌های موردپسندتان را پیدا کنید.","url":"https://sardarleather.netlify.app/#products"},
+    {"@type":"HowToStep","position":2,"name":"به سبد اضافه کنید","text":"روی دکمه «افزودن به سبد» کنار هر محصول بزنید، یا در فرم سفارش، محصول دلخواه خود را توضیح دهید.","url":"https://sardarleather.netlify.app/#products"},
+    {"@type":"HowToStep","position":3,"name":"دکمه ثبت سفارش را بزنید","text":"اسم و شماره‌تان را وارد کنید و روی دکمه یکی از روش‌ها (روبیکا، واتساپ یا پیامک) بزنید — متن سفارش به صورت خودکار کپی می‌شود.","url":"https://sardarleather.netlify.app/#order"},
+    {"@type":"HowToStep","position":4,"name":"در پیام‌رسان بچسبانید","text":"در صفحه چت، متن را Paste کنید و دکمه ارسال را بزنید.","url":"https://sardarleather.netlify.app/#order"}
+  ]
+}
+</script>
+
+<!-- FAQPage — MATCHED with visible FAQ content (SEO requirement) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"زمان ساخت و ارسال سفارش چقدر است؟","acceptedAnswer":{"@type":"Answer","text":"زمان ساخت هر محصول دست‌ساز بسته به نوع و پیچیدگی، بین ۵ تا ۱۰ روز کاری است. پس از آماده شدن، می‌توانید محصول را با مراجعه حضوری به فروشگاه تحویل بگیرید. یا در صورتی که شرایط مراجعه حضوری را ندارید، می‌توانید با ما تماس گرفته و برای ارسال درون شهری یا سراسر کشور هماهنگ کنید."}},
+    {"@type":"Question","name":"آیا امکان سفارش اختصاصی با رنگ و اندازه دلخواه وجود دارد؟","acceptedAnswer":{"@type":"Answer","text":"بله، تمام محصولات چرم سرداری قابلیت شخصی‌سازی دارند. از طریق فرم سفارش اختصاصی یا تماس مستقیم، رنگ، اندازه، مدل و هر جزئیات دیگر را توضیح دهید. ما آن را دقیقاً مطابق سلیقه شما با دست می‌سازیم."}},
+    {"@type":"Question","name":"چرم استفاده شده در محصولات طبیعی است؟","acceptedAnswer":{"@type":"Answer","text":"بله، تمام محصولات از چرم طبیعی و باکیفیت ساخته می‌شوند. چرم طبیعی با گذر زمان زیباتر می‌شود و سال‌ها همراه شما می‌ماند. هیچ چرم مصنوعی در کارگاه چرم سرداری استفاده نمی‌شود."}},
+    {"@type":"Question","name":"هزینه ارسال به سراسر کشور چقدر است؟","acceptedAnswer":{"@type":"Answer","text":"هزینه ارسال بر اساس تعرفه پست یا تیپاکس محاسبه می‌شود و هنگام هماهنگی سفارش به شما اعلام می‌گردد. برای سفارش‌های بالای مبلغ مشخص، ارسال رایگان است."}},
+    {"@type":"Question","name":"آیا امکان مرجوعی یا تعویض کالا وجود دارد؟","acceptedAnswer":{"@type":"Answer","text":"بله، تا ۷ روز پس از دریافت، در صورت وجود مشکل تولیدی، امکان تعویض یا مرجوعی وجود دارد. لطفاً پیش از ارسال با شماره ۰۹۳۸۴۹۲۰۹۲۶ تماس بگیرید و هماهنگ کنید."}}
+  ]
+}
+</script>
+
+<!-- WebPage with speakable -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://sardarleather.netlify.app/#webpage",
+  "url": "https://sardarleather.netlify.app/",
+  "name": "چرم سرداری | خرید کیف و کمربند چرم دست‌ساز الیگودرز",
+  "description": "خرید مستقیم از کارگاه چرم دست‌ساز الیگودرز — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت با چرم طبیعی و دوخت دستی.",
+  "inLanguage": "fa-IR",
+  "isPartOf": {"@id": "https://sardarleather.netlify.app/#website"},
+  "about": {"@id": "https://sardarleather.netlify.app/#store"},
+  "primaryImageOfPage": {"@type":"ImageObject","url":"https://sardarleather.netlify.app/images/og-cover.jpg"},
+  "datePublished": "2020-01-01",
+  "dateModified": "2025-01-20",
+  "breadcrumb": {"@id": "https://sardarleather.netlify.app/#breadcrumb"},
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".hero h1", ".sec-head h2", ".faq-summary"]
+  },
+  "potentialAction": {"@type":"ReadAction","target": ["https://sardarleather.netlify.app/"]}
+}
+</script>
+
 </head>
 <body>
 
@@ -815,9 +800,8 @@
 <noscript>
   <div style="padding:24px;text-align:center;background:#fff3cd;color:#664d03;font-family:Tahoma,sans-serif;line-height:1.8">
     <p><strong>برای مشاهده محصولات و ثبت سفارش، لطفاً JavaScript را در مرورگر خود فعال کنید.</strong></p>
-    <p>یا با شماره <a href="tel:09165197630" style="color:#40260f;font-weight:800">۰۹۱۶۵۱۹۷۶۳۰</a> تماس بگیرید.</p>
+    <p>یا با شماره <a href="tel:09384920926" style="color:#40260f;font-weight:800">۰۹۳۸۴۹۲۰۹۲۶</a> تماس بگیرید.</p>
   </div>
-  <style>.theme-toggle{display:none !important}</style>
 </noscript>
 
 <header>
@@ -865,10 +849,10 @@
       <div class="menu-foot">
         <p>تماس سریع</p>
         <div class="menu-quick">
-          <a href="tel:09165197630" aria-label="تلفن">
+          <a href="tel:09384920926" aria-label="تلفن">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>
           </a>
-          <a href="https://web.rubika.ir/#c=u0GVW5L0374e567a45252238397ca2ee" target="_blank" rel="noopener noreferrer" aria-label="روبیکا">
+          <a href="https://web.rubika.ir/#c=u0Re9B0f2d13ce18c468aa343b2fa757" target="_blank" rel="noopener noreferrer" aria-label="روبیکا">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-4-.9L3 20.5l1.5-4.5a8.4 8.4 0 0 1-1.5-4.5 8.4 8.4 0 0 1 9-8.4 8.5 8.5 0 0 1 9 8.4z"/></svg>
           </a>
           <a href="https://instagram.com/sardarleather" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام">
@@ -887,17 +871,6 @@
         <span class="cart-text">سبد خرید</span>
         <span class="cart-count" id="cartCount" aria-live="polite">0</span>
       </button>
-
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="تغییر به حالت تیره" aria-pressed="false" title="تغییر حالت">
-        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-        </svg>
-      </button>
-
       <button class="burger" id="burger" aria-label="باز کردن منو" aria-expanded="false" aria-controls="menu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -914,7 +887,7 @@
     <div>
       <div class="badge"><span></span> کارگاه چرم دست‌ساز در الیگودرز</div>
       <h1>چرم طبیعی، <em>دست‌دوز</em><br>مطابق سلیقه شما</h1>
-      <p>کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت — همه با چرم طبیعی و دوخت دستی. محصولات را ببینید، به سبد خرید اضافه کنید، سپس گزینه ثبت سفارش را بزنید یا تماس تلفنی بگیرید.</p>
+      <p>کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت — تمامی محصولات با چرم طبیعی و کاملاً دست‌دوز هستند. محصولات را ببینید، به سبد خرید اضافه کنید، سپس گزینه ثبت سفارش را بزنید یا تماس تلفنی بگیرید.</p>
       <div class="btns">
         <a href="#products" class="btn btn-primary">
           مشاهده محصولات
@@ -1005,7 +978,7 @@
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
       <p>
         <b>روش کپی چطور کار می‌کند؟</b><br>
-        وقتی روی دکمه «ثبت سفارش» بزنید، اول یک پنجره کوچک باز می‌شود که نام و شماره تماس شما را می‌گیرد. بعد از تایید، متن کامل سفارش (شامل نام، تلفن، محصولات، تعداد و جمع قیمت) به صورت خودکار در حافظه گوشی شما کپی می‌شود. سپس صفحه چت پیام‌رسان باز می‌شود و شما فقط کافیست انگشتتان را در جای تایپ نگه دارید و گزینه <b>Paste</b> را انتخاب کنید و ارسال را بزنید. <b>در واتساپ و پیامک نیازی به Paste نیست</b> — متن خودکار پر می‌شود.
+        وقتی روی گزینه «ثبت سفارش» کلیک کنید، متن سفارش شما به صورت خودکار در گوشی شما کپی می‌شود. سپس صفحه چت پیام‌رسان باز می‌شود و شما فقط کافیست انگشتتان را در جای تایپ نگه دارید و گزینه <b>Paste</b> را انتخاب کنید و پیام را در همان صفحه ارسال کنید. <b>در واتساپ و پیامک نیازی به Paste نیست</b> — متن خودکار پر می‌شود.
       </p>
     </div>
   </div>
@@ -1014,7 +987,7 @@
 <section class="order-section" id="order">
   <div class="wrap">
     <div class="order-box">
-      <div class="tag">✦ مهم‌ترین بخش</div>
+      <div class="tag">✦ تولید مخصوص خودت ✦</div>
       <h2>ثبت سفارش اختصاصی</h2>
       <p>محصول موردنظر خود را برای ما توضیح دهید — رنگ، اندازه، مدل یا هر جزئیاتی که مد نظر دارید. ما آن را با دست برای شما می‌سازیم.</p>
 
@@ -1022,11 +995,11 @@
         <div class="row">
           <div>
             <label for="f-name">نام و نام خانوادگی</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="مثلاً: علی رضایی" required>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="مثلاً: کیارش سرداری" required>
           </div>
           <div>
             <label for="f-phone">شماره تماس</label>
-            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="۰۹۳۸۴۹۲۰۹۲۶" required>
           </div>
         </div>
         <div>
@@ -1055,7 +1028,7 @@
         <div class="form-note">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           <p>
-            با زدن هر یک از دکمه‌های بالا یا پایین، متن سفارش <b>به صورت خودکار کپی می‌شود</b> و چت پیام‌رسان باز می‌شود. فقط متن را <b>Paste (بچسبانید)</b> کنید و ارسال را بزنید.
+            با انتخاب گزینه های ثبت سفارش، متن سفارش شما <b>به صورت خودکار کپی می‌شود</b> و چت پیام‌رسان باز می‌شود. فقط متن را <b>Paste کنید (بچسبانید)</b> و آن را برای ما ارسال کنید.
           </p>
         </div>
 
@@ -1082,7 +1055,7 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               کپی شماره
             </button>
-            <a href="tel:09165197630" class="fb-btn">
+            <a href="tel:09384920926" class="fb-btn">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>
               تماس مستقیم
             </a>
@@ -1091,9 +1064,9 @@
       </form>
 
       <div class="or">یا</div>
-      <a class="call-big" href="tel:09165197630">
+      <a class="call-big" href="tel:09384920926">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>
-        تماس مستقیم: ۰۹۱۶۵۱۹۷۶۳۰
+        تماس مستقیم: ۰۹۳۸۴۹۲۰۹۲۶
       </a>
     </div>
   </div>
@@ -1122,30 +1095,89 @@
   <div class="wrap">
     <div class="sec-head"><span>ارتباط با ما</span><h2>ما را پیدا کنید</h2><p>برای سفارش، مشاوره یا سوال با ما در تماس باشید.</p></div>
     <div class="contact-grid">
-      <a class="cbox" href="https://www.google.com/maps/search/?api=1&query=الیگودرز+پاساژ+سینا" target="_blank" rel="noopener noreferrer">
+      <a class="cbox" href="https://www.google.com/maps/search/?api=1&query=%D8%A7%D9%84%DB%8C%DA%AF%D9%88%D8%AF%D8%B1%D8%B2+%D9%BE%D8%A7%D8%B3%D8%A7%DA%98+%D8%B3%DB%8C%D9%86%D8%A7" target="_blank" rel="noopener noreferrer">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <h4>آدرس</h4>
         <p class="fa">الیگودرز، خیابان امام خمینی، پاساژ سینا، طبقه پایین، مغازه چرم سرداری</p>
       </a>
-      <a class="cbox" href="tel:09165197630">
+      <a class="cbox" href="tel:09384920926">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg></div>
         <h4>تلفن</h4>
-        <p class="val">۰۹۱۶۵۱۹۷۶۳۰</p>
+        <p class="val">۰۹۳۸۴۹۲۰۹۲۶</p>
       </a>
       <a class="cbox" href="https://instagram.com/sardarleather" target="_blank" rel="noopener noreferrer">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
         <h4>اینستاگرام</h4>
         <p class="val">@sardarleather</p>
       </a>
-      <a class="cbox" href="https://web.rubika.ir/#c=u0GVW5L0374e567a45252238397ca2ee" target="_blank" rel="noopener noreferrer">
+      <a class="cbox" href="https://web.rubika.ir/#c=u0Re9B0f2d13ce18c468aa343b2fa757" target="_blank" rel="noopener noreferrer">
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-4-.9L3 20.5l1.5-4.5a8.4 8.4 0 0 1-1.5-4.5 8.4 8.4 0 0 1 9-8.4 8.5 8.5 0 0 1 9 8.4z"/></svg></div>
         <h4>روبیکا</h4>
-        <p class="val">چت در روبیکا</p>
+        <p class="val">@sardarleather</p>
       </a>
     </div>
   </div>
 </section>
+<section id="faq" class="faq-section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span>سوالات پرتکرار</span>
+      <h2>سوالی دارید؟</h2>
+      <p>پاسخ پرتکرارترین سوالات مشتریان چرم سرداری</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>زمان ساخت و ارسال سفارش چقدر است؟</span>
+          <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-content">
+          <p>زمان ساخت هر محصول دست‌ساز بسته به نوع و پیچیدگی، بین <strong>۵ تا ۱۰ روز کاری</strong> است. پس از آماده شدن، می‌توانید محصول را با مراجعه حضوری به فروشگاه آن را تحویل بگیرید. یا در صورتی که شرایط مراجعه حضوری را ندارید، می‌توانید با ما تماس گرفته و برای ارسال درون شهری یا سراسر کشور، با ما هماهنگ کنید.</p>
+        </div>
+      </details>
 
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>آیا امکان سفارش اختصاصی با رنگ و اندازه دلخواه وجود دارد؟</span>
+          <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-content">
+          <p>بله، تمام محصولات چرم سرداری قابلیت <strong>شخصی‌سازی</strong> دارند. از طریق فرم سفارش اختصاصی یا تماس مستقیم، رنگ، اندازه، مدل و هر جزئیات دیگر را توضیح دهید. ما آن را دقیقاً مطابق سلیقه شما با دست می‌سازیم.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>چرم استفاده شده در محصولات طبیعی است؟</span>
+          <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-content">
+          <p>بله، تمام محصولات از <strong>چرم طبیعی و باکیفیت</strong> ساخته می‌شوند. چرم طبیعی با گذر زمان زیباتر می‌شود و سال‌ها همراه شما می‌ماند. هیچ چرم مصنوعی در کارگاه چرم سرداری استفاده نمی‌شود.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>هزینه ارسال به سراسر کشور چقدر است؟</span>
+          <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-content">
+          <p>هزینه ارسال بر اساس تعرفه پست یا تیپاکس محاسبه می‌شود و هنگام هماهنگی سفارش به شما اعلام می‌گردد. برای سفارش‌های بالای مبلغ مشخص، <strong>ارسال رایگان</strong> است.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span>آیا امکان مرجوعی یا تعویض کالا وجود دارد؟</span>
+          <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-content">
+          <p>بله، تا <strong>۷ روز پس از دریافت</strong>، در صورت وجود مشکل تولیدی، امکان تعویض یا مرجوعی وجود دارد. لطفاً پیش از ارسال با شماره <a href="tel:09384920926">۰۹۳۸۴۹۲۰۹۲۶</a> تماس بگیرید و هماهنگ کنید.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -1164,20 +1196,21 @@
           <li><a href="#home">خانه</a></li>
           <li><a href="#products">محصولات</a></li>
           <li><a href="#order">ثبت سفارش</a></li>
+          <li><a href="#faq">سوالات پرتکرار</a></li>
           <li><a href="#about">درباره ما</a></li>
-          <li><a href="#contact">تماس</a></li>
+          <li><a href="#contact">تماس با ما</a></li>
         </ul>
       </div>
       <div>
         <h5>تماس</h5>
         <ul>
-          <li><a href="tel:09165197630">۰۹۱۶۵۱۹۷۶۳۰</a></li>
+          <li><a href="tel:09384920926">۰۹۳۸۴۹۲۰۹۲۶</a></li>
           <li><a href="https://instagram.com/sardarleather" target="_blank" rel="noopener noreferrer">اینستاگرام</a></li>
-          <li><a href="https://web.rubika.ir/#c=u0GVW5L0374e567a45252238397ca2ee" target="_blank" rel="noopener noreferrer">روبیکا</a></li>
+          <li><a href="https://web.rubika.ir/#c=u0Re9B0f2d13ce18c468aa343b2fa757" target="_blank" rel="noopener noreferrer">روبیکا</a></li>
         </ul>
       </div>
     </div>
-    <div class="copyright">© ۱۴۰۴ چرم سرداری — تمامی حقوق محفوظ است.</div>
+    <div class="copyright">© ۱۳۹۹ تا <span id="currentYear">۱۴۰۴</span> چرم سرداری — تمامی حقوق محفوظ است.</div>
   </div>
 </footer>
 
@@ -1196,17 +1229,17 @@
   <div class="drawer-foot">
     <div class="drawer-hint">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <p>برای هر روش، اول اسم (و برای پیامک فقط اسم) پرسیده می‌شود. بعد متن سفارش <b>کپی می‌شود</b> و چت پیام‌رسان باز می‌شود.</p>
+      <p>پس از ثبت سفارش، اطلاعات خود را وارد کنید. متن سفارش شما <b>کپی شده</b> و چت پیام‌رسان باز می‌شود؛ <b>متن را پیست</b> و <b>ارسال</b> کنید</p>
     </div>
     <div class="drawer-total">
-      <span>جمع تقریبی</span>
+      <span>قیمت کل</span>
       <b id="totalPrice">۰ تومان</b>
     </div>
     <div class="order-actions">
-      <a class="btn-call" href="tel:09165197630">
+      <a class="btn-call" href="tel:09384920926">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>
         <span class="call-text-mobile">تماس تلفنی</span>
-        <span class="call-text-desktop">تماس: ۰۹۱۶۵۱۹۷۶۳۰</span>
+        <span class="call-text-desktop">تماس: ۰۹۳۸۴۹۲۰۹۲۶</span>
       </a>
 
       <div class="btn-sms-wrap">
@@ -1253,11 +1286,11 @@
     <form class="checkout-form" onsubmit="submitQuickOrder(event)" novalidate>
       <div>
         <label for="q-name">نام و نام خانوادگی</label>
-        <input id="q-name" name="qname" type="text" autocomplete="name" placeholder="مثلاً: علی رضایی" required>
+        <input id="q-name" name="qname" type="text" autocomplete="name" placeholder="مثلاً: کیارش سرداری" required>
       </div>
       <div class="phone-field">
         <label for="q-phone">شماره تماس</label>
-        <input id="q-phone" name="qphone" type="tel" autocomplete="tel" inputmode="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹">
+        <input id="q-phone" name="qphone" type="tel" autocomplete="tel" inputmode="tel" placeholder="۰۹۳۸۴۹۲۰۹۲۶">
       </div>
       <button type="submit" class="checkout-submit">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -1278,10 +1311,10 @@
 
 <script>
 /* ============ ثابت‌ها ============ */
-const RUBIKA_CHAT_LINK = 'https://web.rubika.ir/#c=u0GVW5L0374e567a45252238397ca2ee';
-const WHATSAPP_NUMBER = '989165197630';
-const PHONE_NUMBER = '09165197630';
-const PHONE_FOR_SMS = '+989165197630';
+const RUBIKA_CHAT_LINK = 'https://web.rubika.ir/#c=u0Re9B0f2d13ce18c468aa343b2fa757';
+const WHATSAPP_NUMBER = '989384920926';
+const PHONE_NUMBER = '09384920926';
+const PHONE_FOR_SMS = '+989384920926';
 
 const CATS = [
   {id:'bag',   name:'کیف',        icon:'<path d="M8 9V7a4 4 0 0 1 8 0v2"/><rect x="4" y="9" width="16" height="11" rx="2.5"/>'},
@@ -1317,7 +1350,7 @@ const catIcon = id => (CATS.find(c=>c.id===id)||{}).icon || '';
 const catName = id => (CATS.find(c=>c.id===id)||{}).name || '';
 const svg = inner => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${inner}</svg>`;
 
-const normalizeDigits = s => s
+const normalizeDigits = s => String(s || '')
   .replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d))
   .replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
 
@@ -1330,13 +1363,23 @@ const contactStore = {
   set(v){ try { localStorage.setItem('sardar_contact', JSON.stringify(v)); } catch(e){} }
 };
 
+/* ============ امنیت: پاکسازی cart ============ */
 let cart = store.get();
-Object.keys(cart).forEach(k=>{ if(cart[k]===true) cart[k]=1; });
-Object.keys(cart).forEach(k=>{ if(!PRODUCTS.some(p=>p.id == k)) delete cart[k]; });
+if(!cart || typeof cart !== 'object' || Array.isArray(cart)) cart = {};
+Object.keys(cart).forEach(k => {
+  const isValidKey = /^\d+$/.test(k) && PRODUCTS.some(p => p.id == k);
+  const v = cart[k] === true ? 1 : parseInt(cart[k], 10);
+  if(!isValidKey || !Number.isFinite(v) || v <= 0 || v > 999) {
+    delete cart[k];
+  } else {
+    cart[k] = v;
+  }
+});
 const saveCart = () => store.set(cart);
 
-/* ============ کپی همگام ============ */
+/* ============ امنیت: کپی امن ============ */
 function syncCopy(text){
+  text = String(text);
   let ok = false;
   try {
     const ta = document.createElement('textarea');
@@ -1354,9 +1397,12 @@ function syncCopy(text){
     try { ok = document.execCommand('copy'); } catch(e){}
     document.body.removeChild(ta);
   } catch(e){ ok = false; }
-
   if(!ok && navigator.clipboard && navigator.clipboard.writeText){
-    try { navigator.clipboard.writeText(text); ok = true; } catch(e){}
+    try {
+      const p = navigator.clipboard.writeText(text);
+      if(p && p.catch) p.catch(()=>{});
+      ok = true;
+    } catch(e){}
   }
   return ok;
 }
@@ -1373,9 +1419,12 @@ function hideFallbackBox(){
   if(fallback) fallback.classList.remove('show');
 }
 
+/* ============ امنیت: باز کردن لینک خارجی ============ */
 function openExternal(url){
   let win = null;
-  try { win = window.open(url, '_blank'); } catch(e){ win = null; }
+  try {
+    win = window.open(url, '_blank', 'noopener,noreferrer');
+  } catch(e){ win = null; }
   if(win){ try { win.opener = null; } catch(e){} }
   return win;
 }
@@ -1386,7 +1435,6 @@ function syncBodyOverflow(){
   document.body.style.overflow = (drawerOpen || modalOpen) ? 'hidden' : '';
 }
 
-/* ============ روبیکا ============ */
 function copyAndOpenRubika(text){
   const copied = syncCopy(text);
   const win = openExternal(RUBIKA_CHAT_LINK);
@@ -1405,7 +1453,6 @@ function copyAndOpenRubika(text){
   }
 }
 
-/* ============ واتساپ ============ */
 function openWhatsApp(text){
   syncCopy(text);
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
@@ -1419,7 +1466,6 @@ function openWhatsApp(text){
   }
 }
 
-/* ============ پیامک ============ */
 function sendViaSMS(text){
   const isMobile = /Android|iPhone|iPad|iPod|Mobile|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
                    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -1452,7 +1498,6 @@ function sendToMessenger(target, msg){
   else copyAndOpenRubika(msg);
 }
 
-/* ============ Toast ============ */
 let toastTimer;
 function showToast(text, duration=2200){
   const t = document.getElementById('toast');
@@ -1463,7 +1508,6 @@ function showToast(text, duration=2200){
 }
 function showToastLong(text){ showToast(text, 4500); }
 
-/* ============ دسته‌بندی ============ */
 document.getElementById('catBox').innerHTML = CATS.map(c=>`
   <div class="cat" onclick="filterBy('${c.id}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();filterBy('${c.id}')}">${svg(c.icon)}<p>${c.name}</p></div>
 `).join('');
@@ -1633,7 +1677,6 @@ function updateCartUI(){
   totalEl.textContent = fa(total) + ' تومان';
 }
 
-/* ============ Focus trap ============ */
 function setupFocusTrap(container){
   container.addEventListener('keydown', function(e){
     if(e.key !== 'Tab') return;
@@ -1653,7 +1696,6 @@ function setupFocusTrap(container){
 setupFocusTrap(document.getElementById('drawer'));
 setupFocusTrap(document.getElementById('checkoutModal'));
 
-/* ============ Drawer ============ */
 let lastFocused = null;
 function openDrawer(){
   lastFocused = document.activeElement;
@@ -1675,7 +1717,6 @@ function closeDrawer(){
   if(lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
 }
 
-/* ============ Checkout Modal ============ */
 let pendingTarget = null;
 let lastFocusedModal = null;
 
@@ -1728,29 +1769,29 @@ function closeCheckoutModal(){
   if(lastFocusedModal && typeof lastFocusedModal.focus === 'function') lastFocusedModal.focus();
 }
 
-/* ============ سفارش از سبد ============ */
 function orderFromCart(target='rubika'){
   const ids = Object.keys(cart);
   if(ids.length === 0){ showToast('سبد خرید خالی است'); return; }
   openCheckoutModal(target);
 }
 
-/* ============ ساخت پیام سفارش معمولی ============ */
 function buildQuickMessage(name, phone, ids, total, short){
   if(short){
     const lines = ids.map(id=>{
       const p = PRODUCTS.find(x=>x.id == id);
+      if(!p) return '';
       const q = cart[id];
       return `${fa(q)} عدد ${p.name}`;
-    });
+    }).filter(Boolean);
     return `نام: ${name}\n${lines.join('\n')}\nقیمت کل: ${fa(total)} تومان`;
   }
   const lines = ids.map(id=>{
     const p = PRODUCTS.find(x=>x.id == id);
+    if(!p) return '';
     const q = cart[id];
     const sub = p.price * q;
     return `${fa(q)} عدد ${p.name} به قیمت ${fa(sub)} تومان`;
-  });
+  }).filter(Boolean);
   return `سلام، از سایت چرم سرداری این محصولات را انتخاب کرده‌ام:
 
 👤 نام: ${name}
@@ -1805,6 +1846,7 @@ function submitQuickOrder(e){
   let total = 0;
   ids.forEach(id=>{
     const p = PRODUCTS.find(x=>x.id == id);
+    if(!p) return;
     total += p.price * cart[id];
   });
 
@@ -1820,7 +1862,6 @@ function submitQuickOrder(e){
   }, 320);
 }
 
-/* ============ سفارش اختصاصی ============ */
 function validateCustomOrder(form, skipPhone){
   const el = form.elements;
   const nameEl = el.namedItem('name');
@@ -1941,132 +1982,106 @@ document.getElementById('checkoutModal').addEventListener('click', function(e){
   if(e.target === this) closeCheckoutModal();
 });
 
-/* ═══════════════════════════════════════════════════════════
-   THEME LOGIC — خودکار بر اساس ساعت + دکمه دستی
-   ═══════════════════════════════════════════════════════════ */
-const themeToggleBtn = document.getElementById('themeToggle');
-
-function getThemeConfig(){
-  return window.SARDAR_THEME_CONFIG || { darkStart: 19, darkEnd: 6 };
-}
-
-function getAutoTheme(){
-  try {
-    const cfg = getThemeConfig();
-    const hour = new Date().getHours();
-    return (hour >= cfg.darkStart || hour < cfg.darkEnd) ? 'dark' : 'light';
-  } catch(e){
-    return 'light';
-  }
-}
-
-function hasManualPreference(){
-  try {
-    const saved = localStorage.getItem('sardar_theme');
-    return saved === 'dark' || saved === 'light';
-  } catch(e){ return false; }
-}
-
-function updateThemeButton(theme){
-  if(!themeToggleBtn) return;
-  const isDark = theme === 'dark';
-  const isManual = hasManualPreference();
-
-  let label, title;
-  if(isManual){
-    label = isDark ? 'تغییر به حالت روشن' : 'تغییر به حالت تیره';
-    title = (isDark ? 'حالت دستی: تیره' : 'حالت دستی: روشن') + ' — Shift+کلیک برای بازگشت به حالت خودکار';
-  } else {
-    const autoLabel = isDark ? 'شب' : 'روز';
-    label = isDark ? 'تغییر به حالت روشن' : 'تغییر به حالت تیره';
-    title = 'حالت خودکار (' + autoLabel + ') — کلیک برای تغییر دستی';
-  }
-
-  themeToggleBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-  themeToggleBtn.setAttribute('aria-label', label);
-  themeToggleBtn.setAttribute('title', title);
-}
-
-function applyTheme(theme){
-  const t = theme === 'dark' ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', t);
-  const meta = document.getElementById('metaThemeColor');
-  if(meta) meta.setAttribute('content', t === 'dark' ? '#15110d' : '#40260f');
-  updateThemeButton(t);
-}
-
-// Initial sync
-const currentInitialTheme = document.documentElement.getAttribute('data-theme') || 'light';
-updateThemeButton(currentInitialTheme);
-
-// Toggle button handler
-if(themeToggleBtn){
-  themeToggleBtn.addEventListener('click', function(e){
-    // Shift+click = reset to auto
-    if(e.shiftKey){
-      try { localStorage.removeItem('sardar_theme'); } catch(err){}
-      const auto = getAutoTheme();
-      document.documentElement.classList.add('theme-transitioning');
-      applyTheme(auto);
-      showToast('✓ حالت خودکار فعال شد (' + (auto === 'dark' ? 'شب' : 'روز') + ')');
-      setTimeout(function(){
-        document.documentElement.classList.remove('theme-transitioning');
-      }, 350);
-      return;
-    }
-
-    // Normal click = toggle and save manual preference
-    const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-    const next = current === 'dark' ? 'light' : 'dark';
-
-    document.documentElement.classList.add('theme-transitioning');
-    applyTheme(next);
-
-    try { localStorage.setItem('sardar_theme', next); } catch(err){}
-
-    setTimeout(function(){
-      document.documentElement.classList.remove('theme-transitioning');
-    }, 350);
-  });
-}
-
-// Auto-check: only if user has no manual preference
-function autoThemeCheck(){
-  if(hasManualPreference()) return;
-
-  // Don't switch if user is actively interacting with a modal/drawer
-  const drawerEl = document.getElementById('drawer');
-  const modalEl = document.getElementById('checkoutModal');
-  if((drawerEl && drawerEl.classList.contains('open')) || (modalEl && modalEl.classList.contains('open'))) return;
-
-  // Don't switch if user is typing in a form field
-  const active = document.activeElement;
-  if(active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || active.tagName === 'SELECT')) return;
-
-  const current = document.documentElement.getAttribute('data-theme');
-  const target = getAutoTheme();
-
-  if(current !== target){
-    document.documentElement.classList.add('theme-transitioning');
-    applyTheme(target);
-    setTimeout(function(){
-      document.documentElement.classList.remove('theme-transitioning');
-    }, 350);
-  }
-}
-
-// Run auto-check every 15 minutes
-setInterval(autoThemeCheck, 15 * 60 * 1000);
-
-// Also run on tab focus
-document.addEventListener('visibilitychange', function(){
-  if(!document.hidden) autoThemeCheck();
-});
-
-/* ============ Init ============ */
 renderFilters();
 renderProducts();
 updateCartUI();
+
+/* ============ سال شمسی جاری (خودکار) ============ */
+try {
+  const faYear = new Intl.DateTimeFormat('fa-IR', { year: 'numeric' }).format(new Date());
+  const yearMatch = faYear.match(/[۰-۹0-9]{4}/);
+  const yearEl = document.getElementById('currentYear');
+  if (yearMatch && yearEl) {
+    yearEl.textContent = yearMatch[0];
+  }
+} catch (e) {}
+
+/* ═══════════════════════════════════════════════════════════
+   FAQ ACCORDION — SMOOTH ANIMATION
+   ═══════════════════════════════════════════════════════════ */
+(function initFAQAccordion(){
+  const items = document.querySelectorAll('#faq .faq-item');
+  if (!items.length) return;
+
+  const reduceMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function closeAllExcept(currentItem){
+    items.forEach(other => {
+      if (other !== currentItem && other.open) {
+        const oc = other.querySelector('.faq-content');
+
+        if (reduceMotion || !oc) {
+          other.open = false;
+          return;
+        }
+
+        oc.style.height = oc.scrollHeight + 'px';
+        oc.style.opacity = '1';
+        void oc.offsetHeight;
+        oc.style.height = '0px';
+        oc.style.opacity = '0';
+
+        setTimeout(() => {
+          other.open = false;
+          oc.style.height = '';
+          oc.style.opacity = '';
+        }, 400);
+      }
+    });
+  }
+
+  items.forEach(item => {
+    const summary = item.querySelector('.faq-summary');
+    const content = item.querySelector('.faq-content');
+    if (!summary || !content) return;
+
+    let animating = false;
+
+    summary.addEventListener('click', function(e){
+      e.preventDefault();
+      if (animating) return;
+      closeAllExcept(item);
+
+      if (reduceMotion) {
+        item.open = !item.open;
+        return;
+      }
+
+      if (item.open) {
+        animating = true;
+        content.style.height = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+        void content.offsetHeight;
+        content.style.height = '0px';
+        content.style.opacity = '0';
+
+        setTimeout(() => {
+          item.open = false;
+          content.style.height = '';
+          content.style.opacity = '';
+          animating = false;
+        }, 400);
+      } else {
+        item.open = true;
+        animating = true;
+        const targetHeight = content.scrollHeight;
+        content.style.height = '0px';
+        content.style.opacity = '0';
+        void content.offsetHeight;
+        content.style.height = targetHeight + 'px';
+        content.style.opacity = '1';
+
+        setTimeout(() => {
+          content.style.height = '';
+          content.style.opacity = '';
+          animating = false;
+        }, 400);
+      }
+    });
+  });
+})();
 </script>
+
 </body>
 </html>
