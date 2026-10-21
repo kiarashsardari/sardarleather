@@ -7,32 +7,11 @@
 
 <!-- ═══════════════════════════════════════════════════════════
      اقدامات لازم قبل از انتشار عمومی:
-     
-     1. جایگزینی دامنه:
-        همه‌ی https://sardarleather.netlify.app/ را با دامنه‌ی واقعی
-        عوض کنید (canonical, og:url, og:image, twitter:image, hreflang, JSON-LD)
-     
-     2. ساخت فایل‌های جانبی:
-        • images/og-cover.jpg  (۱۲۰۰×۶۳۰)  — پیش‌نمایش اشتراک
-        • images/logo.png      (۵۱۲×۵۱۲)   — لوگو برای Knowledge Panel
-        • images/products/1.jpg تا 15.jpg  (۸۰۰×۸۰۰) — عکس محصولات
-     
-     3. فایل‌های ریشه:
-        • robots.txt
-        • sitemap.xml
-     
-     4. تأیید در موتورهای جستجو:
-        در search.google.com/search-console بعد از ثبت، تگ زیر را در <head> قرار دهید:
-        <meta name="google-site-verification" content="YOUR_CODE_HERE">
-        و در bing.com/webmasters:
-        <meta name="msvalidate.01" content="YOUR_CODE_HERE">
-     
-     5. امنیت (فایل _headers در Netlify):
-        /*
-          Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'
-          X-Content-Type-Options: nosniff
-          X-Frame-Options: DENY
-          Referrer-Policy: strict-origin-when-cross-origin
+     1. جایگزینی دامنه با دامنه واقعی
+     2. ساخت فایل‌های images/og-cover.jpg, logo.png, products/1-15.jpg
+     3. ساخت robots.txt و sitemap.xml
+     4. تأیید در Google Search Console و Bing
+     5. افزودن _headers امنیتی Netlify
      ═══════════════════════════════════════════════════════════ -->
 
 <meta name="description" content="چرم سرداری، کارگاه چرم دست‌ساز در الیگودرز — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت با چرم طبیعی و دوخت دستی. تولید مستقیم، بدون واسطه، ارسال به سراسر کشور. سفارش از طریق روبیکا، واتساپ و پیامک.">
@@ -45,46 +24,39 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="rating" content="general">
 
-<!-- Canonical + Language alternates -->
-<link rel="canonical" href="https://sardarleather.netlify.app/">
-<link rel="alternate" hreflang="fa" href="https://sardarleather.netlify.app/">
-<link rel="alternate" hreflang="fa-IR" href="https://sardarleather.netlify.app/">
-<link rel="alternate" hreflang="x-default" href="https://sardarleather.netlify.app/">
-
-<!-- Sitemap discovery -->
-<link rel="sitemap" type="application/xml" title="Sitemap" href="https://sardarleather.netlify.app/sitemap.xml">
-
-<!-- Social verification -->
+<link rel="canonical" href="https://sardarleather.ir/">
+<link rel="alternate" hreflang="fa" href="https://sardarleather.ir/">
+<link rel="alternate" hreflang="fa-IR" href="https://sardarleather.ir/">
+<link rel="alternate" hreflang="x-default" href="https://sardarleather.ir/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://sardarleather.ir/sitemap.xml">
 <link rel="me" href="https://instagram.com/sardarleather">
 
-<!-- Geo / Local SEO signals -->
 <meta name="geo.region" content="IR-15">
 <meta name="geo.placename" content="الیگودرز، لرستان">
 <meta name="geo.position" content="33.4009;49.6949">
 <meta name="ICBM" content="33.4009, 49.6949">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="چرم سرداری | محصولات چرمی دست‌ساز الیگودرز">
 <meta property="og:description" content="چرم طبیعی، دست‌دوز، مطابق سلیقه شما — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت. ارسال به سراسر کشور.">
-<meta property="og:url" content="https://sardarleather.netlify.app/">
+<meta property="og:url" content="https://sardarleather.ir/">
 <meta property="og:site_name" content="چرم سرداری">
 <meta property="og:locale" content="fa_IR">
-<meta property="og:image" content="https://sardarleather.netlify.app/images/og-cover.jpg">
-<meta property="og:image:secure_url" content="https://sardarleather.netlify.app/images/og-cover.jpg">
+<meta property="og:image" content="https://sardarleather.ir/images/og-cover.jpg">
+<meta property="og:image:secure_url" content="https://sardarleather.ir/images/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:alt" content="چرم سرداری — محصولات چرمی دست‌ساز">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="چرم سرداری | محصولات چرمی دست‌ساز الیگودرز">
 <meta name="twitter:description" content="چرم طبیعی، دست‌دوز، مطابق سلیقه شما — ارسال به سراسر کشور.">
-<meta name="twitter:image" content="https://sardarleather.netlify.app/images/og-cover.jpg">
+<meta name="twitter:image" content="https://sardarleather.ir/images/og-cover.jpg">
 <meta name="twitter:image:alt" content="چرم سرداری — محصولات چرمی دست‌ساز">
+<link rel="preload" as="image" href="https://sardarleather.ir/images/og-cover.jpg" fetchpriority="high">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2340260f'/%3E%3Cpath d='M35 40V32a15 15 0 0 1 30 0v8' stroke='%23f3e5d3' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Crect x='28' y='40' width='44' height='34' rx='6' stroke='%23f3e5d3' stroke-width='5' fill='none'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%2340260f'/%3E%3Cpath%20d='M35%2040V32a15%2015%200%200%201%2030%200v8'%20stroke='%23f3e5d3'%20stroke-width='5'%20fill='none'%20stroke-linecap='round'/%3E%3Crect%20x='28'%20y='40'%20width='44'%20height='34'%20rx='6'%20stroke='%23f3e5d3'%20stroke-width='5'%20fill='none'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
@@ -92,16 +64,16 @@
 {
   "@context": "https://schema.org",
   "@type": "LeatherGoodsStore",
-  "@id": "https://sardarleather.netlify.app/#store",
+  "@id": "https://sardarleather.ir/#store",
   "name": "چرم سرداری",
   "alternateName": "Sardar Leather Workshop",
   "slogan": "چرم طبیعی، دست‌دوز، مطابق سلیقه شما",
   "description": "کارگاه چرم دست‌ساز در الیگودرز — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت با چرم طبیعی و دوخت دستی. تولید مستقیم، بدون واسطه، ارسال به سراسر کشور.",
   "telephone": "+989384920926",
   "priceRange": "180000-3200000 IRR",
-  "url": "https://sardarleather.netlify.app/",
-  "image": ["https://sardarleather.netlify.app/images/og-cover.jpg"],
-  "logo": "https://sardarleather.netlify.app/images/logo.png",
+  "url": "https://sardarleather.ir/",
+  "image": ["https://sardarleather.ir/images/og-cover.jpg"],
+  "logo": "https://sardarleather.ir/images/logo.png",
   "foundingDate": "2020",
   "address": {
     "@type": "PostalAddress",
@@ -110,25 +82,12 @@
     "addressRegion": "لرستان",
     "addressCountry": "IR"
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 33.4009,
-    "longitude": 49.6949
-  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.4009, "longitude": 49.6949 },
   "hasMap": "https://www.google.com/maps/search/?api=1&query=33.4009,49.6949",
   "areaServed": { "@type": "Country", "name": "ایران" },
   "currenciesAccepted": "IRR",
   "paymentAccepted": "نقدی، کارت به کارت",
-  "knowsAbout": [
-    "چرم دست‌دوز",
-    "کیف چرم",
-    "کمربند چرم",
-    "کیف پول چرم",
-    "جاکارتی چرم",
-    "قاب گوشی چرم",
-    "دسته ساعت چرم",
-    "هنرهای دستی"
-  ],
+  "knowsAbout": ["چرم دست‌دوز","کیف چرم","کمربند چرم","کیف پول چرم","جاکارتی چرم","قاب گوشی چرم","دسته ساعت چرم","هنرهای دستی"],
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+989384920926",
@@ -139,8 +98,7 @@
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
-    "opens": "09:00",
-    "closes": "21:00"
+    "opens": "09:00", "closes": "21:00"
   }],
   "sameAs": [
     "https://instagram.com/sardarleather",
@@ -154,12 +112,12 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://sardarleather.netlify.app/#website",
-  "url": "https://sardarleather.netlify.app/",
+  "@id": "https://sardarleather.ir/#website",
+  "url": "https://sardarleather.ir/",
   "name": "چرم سرداری",
   "description": "محصولات چرمی دست‌ساز — کیف، کمربند، کیف پول و لوازم چرمی",
   "inLanguage": "fa-IR",
-  "publisher": { "@id": "https://sardarleather.netlify.app/#store" }
+  "publisher": { "@id": "https://sardarleather.ir/#store" }
 }
 </script>
 
@@ -167,15 +125,15 @@
 {
   "@context": "https://schema.org",
   "@type": "SiteNavigationElement",
-  "@id": "https://sardarleather.netlify.app/#nav",
+  "@id": "https://sardarleather.ir/#nav",
   "name": ["خانه","دسته‌بندی","محصولات","ثبت سفارش","درباره ما","تماس با ما"],
   "url": [
-    "https://sardarleather.netlify.app/#home",
-    "https://sardarleather.netlify.app/#categories",
-    "https://sardarleather.netlify.app/#products",
-    "https://sardarleather.netlify.app/#order",
-    "https://sardarleather.netlify.app/#about",
-    "https://sardarleather.netlify.app/#contact"
+    "https://sardarleather.ir/#home",
+    "https://sardarleather.ir/#categories",
+    "https://sardarleather.ir/#products",
+    "https://sardarleather.ir/#order",
+    "https://sardarleather.ir/#about",
+    "https://sardarleather.ir/#contact"
   ]
 }
 </script>
@@ -187,25 +145,26 @@
   "name": "محصولات چرم سرداری",
   "numberOfItems": 15,
   "itemListElement": [
-    {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"کیف دستی چرم طبیعی","category":"کیف","sku":"SL-001","description":"کیف دستی دست‌دوز از چرم طبیعی با دوخت کاملاً دستی، مناسب استفاده روزمره","image":"https://sardarleather.netlify.app/images/products/1.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"2850000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"کمربند چرم دست‌دوز","category":"کمربند","sku":"SL-002","description":"کمربند چرم دست‌دوز با دوخت کاملاً دستی و سگک مقاوم","image":"https://sardarleather.netlify.app/images/products/2.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"890000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"کیف پول چرم مردانه","category":"کیف پول","sku":"SL-003","description":"کیف پول چرم مردانه با طراحی ساده و کاربردی، جای کارت و اسکناس","image":"https://sardarleather.netlify.app/images/products/3.jpg","material":"چرم طبیعی","audience":{"@type":"PeopleAudience","suggestedGender":"Male"},"brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"650000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"جاکارتی چرم","category":"جاکارتی","sku":"SL-004","description":"جاکارتی چرمی دست‌دوز برای نگهداری کارت‌های بانکی و شناسایی","image":"https://sardarleather.netlify.app/images/products/4.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"320000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"قاب گوشی چرم","category":"قاب گوشی","sku":"SL-005","description":"قاب گوشی چرمی دست‌ساز، محافظ شیک برای گوشی شما","image":"https://sardarleather.netlify.app/images/products/5.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"480000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"دسته ساعت چرم","category":"دسته ساعت","sku":"SL-006","description":"دسته ساعت چرم دست‌دوز، مناسب ساعت‌های کلاسیک","image":"https://sardarleather.netlify.app/images/products/6.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"390000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"کیف دوشی چرم","category":"کیف","sku":"SL-007","description":"کیف دوشی چرم با بند قابل تنظیم و فضای داخلی مناسب","image":"https://sardarleather.netlify.app/images/products/7.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"1950000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"کمربند چرم زنانه","category":"کمربند","sku":"SL-008","description":"کمربند چرم زنانه دست‌دوز با طراحی ظریف","image":"https://sardarleather.netlify.app/images/products/8.jpg","material":"چرم طبیعی","audience":{"@type":"PeopleAudience","suggestedGender":"Female"},"brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"780000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":9,"item":{"@type":"Product","name":"کیف پول چرم زنانه","category":"کیف پول","sku":"SL-009","description":"کیف پول چرم زنانه با طراحی شیک و جیب متعدد","image":"https://sardarleather.netlify.app/images/products/9.jpg","material":"چرم طبیعی","audience":{"@type":"PeopleAudience","suggestedGender":"Female"},"brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"720000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":10,"item":{"@type":"Product","name":"قاب گوشی چرم مدل رول","category":"قاب گوشی","sku":"SL-010","description":"قاب گوشی چرم مدل رول دست‌ساز با پوشش کامل","image":"https://sardarleather.netlify.app/images/products/10.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"540000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":11,"item":{"@type":"Product","name":"کیف لپ‌تاپ چرم","category":"کیف","sku":"SL-011","description":"کیف لپ‌تاپ چرم با محافظ داخلی و بند شانه‌ای","image":"https://sardarleather.netlify.app/images/products/11.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"3200000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":12,"item":{"@type":"Product","name":"دسته ساعت چرم دوخت‌دار","category":"دسته ساعت","sku":"SL-012","description":"دسته ساعت چرم دوخت‌دار با دوخت زیگزاگ دست‌ساز","image":"https://sardarleather.netlify.app/images/products/12.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"450000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":13,"item":{"@type":"Product","name":"جاکلیدی چرم","category":"سایر","sku":"SL-013","description":"جاکلیدی چرم دست‌ساز با حلقه فلزی مقاوم","image":"https://sardarleather.netlify.app/images/products/13.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"180000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":14,"item":{"@type":"Product","name":"کارت ویزیت چرمی","category":"سایر","sku":"SL-014","description":"جاکارتی کارت ویزیت چرمی، مناسب هدیه تجاری","image":"https://sardarleather.netlify.app/images/products/14.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"250000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}},
-    {"@type":"ListItem","position":15,"item":{"@type":"Product","name":"بند عینک چرم","category":"سایر","sku":"SL-015","description":"بند عینک چرم دست‌ساز، نگه‌دارنده شیک عینک","image":"https://sardarleather.netlify.app/images/products/15.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"220000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.netlify.app/#products","seller":{"@id":"https://sardarleather.netlify.app/#store"}}}}
+    {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"کیف دستی چرم طبیعی","category":"کیف","sku":"SL-001","description":"کیف دستی دست‌دوز از چرم طبیعی با دوخت کاملاً دستی، مناسب استفاده روزمره","image":"https://sardarleather.ir/images/products/1.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"2850000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"کمربند چرم دست‌دوز","category":"کمربند","sku":"SL-002","description":"کمربند چرم دست‌دوز با دوخت کاملاً دستی و سگک مقاوم","image":"https://sardarleather.ir/images/products/2.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"890000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"کیف پول چرم مردانه","category":"کیف پول","sku":"SL-003","description":"کیف پول چرم مردانه با طراحی ساده و کاربردی، جای کارت و اسکناس","image":"https://sardarleather.ir/images/products/3.jpg","material":"چرم طبیعی","audience":{"@type":"PeopleAudience","suggestedGender":"Male"},"brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"650000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"جاکارتی چرم","category":"جاکارتی","sku":"SL-004","description":"جاکارتی چرمی دست‌دوز برای نگهداری کارت‌های بانکی و شناسایی","image":"https://sardarleather.ir/images/products/4.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"320000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"قاب گوشی چرم","category":"قاب گوشی","sku":"SL-005","description":"قاب گوشی چرمی دست‌ساز، محافظ شیک برای گوشی شما","image":"https://sardarleather.ir/images/products/5.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"480000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"دسته ساعت چرم","category":"دسته ساعت","sku":"SL-006","description":"دسته ساعت چرم دست‌دوز، مناسب ساعت‌های کلاسیک","image":"https://sardarleather.ir/images/products/6.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"390000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"کیف دوشی چرم","category":"کیف","sku":"SL-007","description":"کیف دوشی چرم با بند قابل تنظیم و فضای داخلی مناسب","image":"https://sardarleather.ir/images/products/7.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"1950000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"کمربند چرم زنانه","category":"کمربند","sku":"SL-008","description":"کمربند چرم زنانه دست‌دوز با طراحی ظریف","image":"https://sardarleather.ir/images/products/8.jpg","material":"چرم طبیعی","audience":{"@type":"PeopleAudience","suggestedGender":"Female"},"brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"780000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":9,"item":{"@type":"Product","name":"کیف پول چرم زنانه","category":"کیف پول","sku":"SL-009","description":"کیف پول چرم زنانه با طراحی شیک و جیب متعدد","image":"https://sardarleather.ir/images/products/9.jpg","material":"چرم طبیعی","audience":{"@type":"PeopleAudience","suggestedGender":"Female"},"brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"720000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":10,"item":{"@type":"Product","name":"قاب گوشی چرم مدل رول","category":"قاب گوشی","sku":"SL-010","description":"قاب گوشی چرم مدل رول دست‌ساز با پوشش کامل","image":"https://sardarleather.ir/images/products/10.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"540000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":11,"item":{"@type":"Product","name":"کیف لپ‌تاپ چرم","category":"کیف","sku":"SL-011","description":"کیف لپ‌تاپ چرم با محافظ داخلی و بند شانه‌ای","image":"https://sardarleather.ir/images/products/11.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"3200000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":12,"item":{"@type":"Product","name":"دسته ساعت چرم دوخت‌دار","category":"دسته ساعت","sku":"SL-012","description":"دسته ساعت چرم دوخت‌دار با دوخت زیگزاگ دست‌ساز","image":"https://sardarleather.ir/images/products/12.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"450000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":13,"item":{"@type":"Product","name":"جاکلیدی چرم","category":"سایر","sku":"SL-013","description":"جاکلیدی چرم دست‌ساز با حلقه فلزی مقاوم","image":"https://sardarleather.ir/images/products/13.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"180000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":14,"item":{"@type":"Product","name":"کارت ویزیت چرمی","category":"سایر","sku":"SL-014","description":"جاکارتی کارت ویزیت چرمی، مناسب هدیه تجاری","image":"https://sardarleather.ir/images/products/14.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"250000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}},
+    {"@type":"ListItem","position":15,"item":{"@type":"Product","name":"بند عینک چرم","category":"سایر","sku":"SL-015","description":"بند عینک چرم دست‌ساز، نگه‌دارنده شیک عینک","image":"https://sardarleather.ir/images/products/15.jpg","material":"چرم طبیعی","brand":{"@type":"Brand","name":"چرم سرداری"},"itemCondition":"https://schema.org/NewCondition","offers":{"@type":"Offer","price":"220000","priceCurrency":"IRR","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock","url":"https://sardarleather.ir/#products","seller":{"@id":"https://sardarleather.ir/#store"}}}}
   ]
 }
 </script>
 
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
 
 <style>
@@ -279,7 +238,7 @@
   .features{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-block:1px solid var(--line)}
   .feature{background:var(--paper);padding:26px 20px;text-align:center}
   .feature svg{color:var(--gold);margin-bottom:10px}
-  .feature h4{font-size:.94rem;font-weight:700;color:var(--leather-dark);margin-bottom:3px}
+  .feature h2{font-size:.94rem;font-weight:700;color:var(--leather-dark);margin-bottom:3px}
   .feature p{font-size:.8rem;color:var(--muted)}
 
   section{padding:80px 0}
@@ -335,7 +294,7 @@
   .step{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px 20px;text-align:center;position:relative;transition:.25s}
   .step:hover{border-color:var(--leather);transform:translateY(-4px);box-shadow:0 14px 32px rgba(64,38,15,.1)}
   .step-num{width:48px;height:48px;border-radius:50%;background:var(--leather-dark);color:#f3e5d3;display:grid;place-items:center;font-weight:800;font-size:1.15rem;margin:0 auto 14px}
-  .step h4{font-size:1rem;font-weight:700;color:var(--leather-dark);margin-bottom:8px;line-height:1.4}
+  .step h3{font-size:1rem;font-weight:700;color:var(--leather-dark);margin-bottom:8px;line-height:1.4}
   .step p{font-size:.87rem;color:var(--muted);line-height:1.7}
 
   .note-box{display:flex;align-items:flex-start;gap:12px;background:rgba(147,51,234,.08);border:1px solid rgba(147,51,234,.25);border-radius:14px;padding:14px 16px;margin-top:18px;text-align:right;max-width:720px;margin-left:auto;margin-right:auto}
@@ -402,14 +361,14 @@
   .cbox{display:block;color:inherit;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:30px 22px;text-align:center;transition:.25s}
   .cbox:hover{border-color:var(--leather);transform:translateY(-4px);box-shadow:0 14px 32px rgba(64,38,15,.1)}
   .cbox .ico{width:56px;height:56px;margin:0 auto 14px;border-radius:16px;background:#efe4d2;display:grid;place-items:center;color:var(--leather)}
-  .cbox h4{font-size:.95rem;font-weight:700;color:var(--leather-dark);margin-bottom:6px}
+  .cbox h3{font-size:.95rem;font-weight:700;color:var(--leather-dark);margin-bottom:6px}
   .cbox p{font-size:.88rem;color:var(--muted)}
   .cbox .val{direction:ltr;unicode-bidi:plaintext}
   .cbox .fa{direction:rtl}
 
   footer{background:var(--leather-dark);color:#d8c4a6;padding:54px 0 26px}
   .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px}
-  footer h5{color:#f3e5d3;font-size:1rem;margin-bottom:16px;font-weight:700}
+  footer h3{color:#f3e5d3;font-size:1rem;margin-bottom:16px;font-weight:700}
   footer p{font-size:.88rem;line-height:1.9;color:#bda88c}
   footer ul{list-style:none;display:grid;gap:10px}
   footer li a{font-size:.88rem;color:#bda88c;transition:.2s}
@@ -418,10 +377,10 @@
   .foot-logo .logo-mark{background:linear-gradient(135deg,#b8894a,#7a4a2b)}
   .copyright{border-top:1px solid rgba(243,229,211,.12);padding-top:22px;text-align:center;font-size:.82rem;color:#9a8468}
 
-  .overlay{position:fixed;inset:0;background:rgba(42,31,23,.5);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:.3s;z-index:200}
+  .overlay{position:fixed;inset:0;background:rgba(42,31,23,.5);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:.3s;z-index:200;will-change:opacity}
   .overlay.open{opacity:1;visibility:visible}
-  .drawer{position:fixed;top:0;left:0;height:100%;width:min(400px,92vw);background:var(--paper);z-index:201;display:flex;flex-direction:column;transform:translateX(-100%);transition:.35s cubic-bezier(.4,0,.2,1);box-shadow:20px 0 60px rgba(42,31,23,.25)}
-  .drawer.open{transform:translateX(0)}
+  .drawer{position:fixed;top:0;left:0;height:100%;width:min(400px,92vw);background:var(--paper);z-index:201;display:flex;flex-direction:column;transform:translate3d(-100%,0,0);transition:.35s cubic-bezier(.4,0,.2,1);box-shadow:20px 0 60px rgba(42,31,23,.25);will-change:transform;backface-visibility:hidden;-webkit-backface-visibility:hidden;contain:layout paint}
+  .drawer.open{transform:translate3d(0,0,0)}
   .drawer-head{padding:22px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
   .drawer-head h3{font-size:1.1rem;color:var(--leather-dark);display:flex;align-items:center;gap:9px}
   .drawer-head h3 svg{color:var(--gold)}
@@ -591,118 +550,25 @@
       scroll-behavior:auto!important;
     }
   }
-/* ═══════════════════════════════════════════════════════════
-   FAQ ACCORDION — ANIMATED
-   ═══════════════════════════════════════════════════════════ */
-.faq-section{
-  padding:80px 0;
-  background:var(--cream);
-  border-top:1px solid var(--line);
-}
-.faq-list{
-  max-width:760px;
-  margin:0 auto;
-  display:grid;
-  gap:12px;
-}
-.faq-item{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:14px;
-  overflow:hidden;
-  transition:border-color .25s ease,box-shadow .25s ease;
-}
-.faq-item:hover{
-  border-color:#d8c4a6;
-}
-.faq-item[open]{
-  border-color:var(--leather);
-  box-shadow:0 6px 24px rgba(64,38,15,.08);
-}
-.faq-summary{
-  padding:18px 22px;
-  cursor:pointer;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  list-style:none;
-  font-weight:700;
-  color:#7a4a2b;
-  font-size:.98rem;
-  user-select:none;
-  -webkit-tap-highlight-color:transparent;
-  transition:color .2s;
-}
+
+.faq-section{padding:80px 0;background:var(--cream);border-top:1px solid var(--line)}
+.faq-list{max-width:760px;margin:0 auto;display:grid;gap:12px}
+.faq-item{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .25s ease,box-shadow .25s ease}
+.faq-item:hover{border-color:#d8c4a6}
+.faq-item[open]{border-color:var(--leather);box-shadow:0 6px 24px rgba(64,38,15,.08)}
+.faq-summary{padding:18px 22px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;list-style:none;font-weight:700;color:#7a4a2b;font-size:.98rem;user-select:none;-webkit-tap-highlight-color:transparent;transition:color .2s}
 .faq-summary:hover{color:#5a3820}
 .faq-summary::-webkit-details-marker{display:none}
 .faq-summary::marker{content:''}
-.faq-summary:focus-visible{
-  outline:2px solid var(--gold);
-  outline-offset:-2px;
-  border-radius:14px;
-}
-.faq-arrow{
-  flex-shrink:0;
-  color:var(--gold);
-  transition:transform .4s cubic-bezier(.4,0,.2,1);
-}
-.faq-item[open] .faq-arrow{
-  transform:rotate(180deg);
-}
-.faq-content{
-  overflow:hidden;
-  height:0;
-  opacity:0;
-  transition:height .4s cubic-bezier(.4,0,.2,1),opacity .3s ease;
-}
-.faq-item[open] .faq-content{
-  height:auto;
-  opacity:1;
-}
-.faq-content p{
-  margin:0;
-  padding:0 22px 20px;
-  color:#7a4a2b;
-  opacity:.68;
-  line-height:1.95;
-  font-size:.92rem;
-  font-weight:400;
-}
-.faq-content strong{
-  color:#7a4a2b;
-  font-weight:600;
-}
-.faq-content a{
-  color:#7a4a2b;
-  font-weight:600;
-  text-decoration:none;
-  border-bottom:1px None #7a4a2b;
-  opacity:.85;
-  transition:color .2s, border-color .2s, opacity .2s;
-}
-.faq-content a:hover{
-  color:var(--gold);
-  border-bottom-color:var(--gold);
-  opacity:1;
-}
-/* ═══════════════════════════════════════════════════════════
-   DRAWER — GPU ACCELERATION & SMOOTHNESS
-   ═══════════════════════════════════════════════════════════ */
-.drawer{
-  will-change:transform;
-  transform:translate3d(-100%,0,0);
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden;
-  contain:layout paint;
-}
-.drawer.open{
-  transform:translate3d(0,0,0);
-}
-
-.overlay{
-  will-change:opacity;
-}
+.faq-summary:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;border-radius:14px}
+.faq-arrow{flex-shrink:0;color:var(--gold);transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.faq-item[open] .faq-arrow{transform:rotate(180deg)}
+.faq-content{overflow:hidden;height:0;opacity:0;transition:height .4s cubic-bezier(.4,0,.2,1),opacity .3s ease}
+.faq-item[open] .faq-content{height:auto;opacity:1}
+.faq-content p{margin:0;padding:0 22px 20px;color:#7a4a2b;opacity:.68;line-height:1.95;font-size:.92rem;font-weight:400}
+.faq-content strong{color:#7a4a2b;font-weight:600}
+.faq-content a{color:#7a4a2b;font-weight:600;text-decoration:none;border-bottom:none;opacity:.85;transition:color .2s, border-color .2s, opacity .2s}
+.faq-content a:hover{color:var(--gold);border-bottom-color:var(--gold);opacity:1}
 
 @media(max-width:520px){
   .faq-section{padding:56px 0}
@@ -711,31 +577,22 @@
 }
 
 @media(prefers-reduced-motion:reduce){
-  .faq-content,
-  .faq-arrow,
-  .drawer,
-  .overlay{
-    transition-duration:.01ms!important;
-  }
+  .faq-content,.faq-arrow,.drawer,.overlay{transition-duration:.01ms!important}
 }
 </style>
 
-<link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
-
-<!-- Breadcrumb -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"خانه","item":"https://sardarleather.netlify.app/"},
-    {"@type":"ListItem","position":2,"name":"محصولات","item":"https://sardarleather.netlify.app/#products"},
-    {"@type":"ListItem","position":3,"name":"ثبت سفارش","item":"https://sardarleather.netlify.app/#order"}
+    {"@type":"ListItem","position":1,"name":"خانه","item":"https://sardarleather.ir/"},
+    {"@type":"ListItem","position":2,"name":"محصولات","item":"https://sardarleather.ir/#products"},
+    {"@type":"ListItem","position":3,"name":"ثبت سفارش","item":"https://sardarleather.ir/#order"}
   ]
 }
 </script>
 
-<!-- HowTo -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -745,15 +602,14 @@
   "totalTime": "PT5M",
   "estimatedCost": {"@type":"MonetaryAmount","currency":"IRR","value":"180000"},
   "step": [
-    {"@type":"HowToStep","position":1,"name":"محصولات را ببینید","text":"گالری محصولات را مرور کنید و طرح‌های موردپسندتان را پیدا کنید.","url":"https://sardarleather.netlify.app/#products"},
-    {"@type":"HowToStep","position":2,"name":"به سبد اضافه کنید","text":"روی دکمه «افزودن به سبد» کنار هر محصول بزنید، یا در فرم سفارش، محصول دلخواه خود را توضیح دهید.","url":"https://sardarleather.netlify.app/#products"},
-    {"@type":"HowToStep","position":3,"name":"دکمه ثبت سفارش را بزنید","text":"اسم و شماره‌تان را وارد کنید و روی دکمه یکی از روش‌ها (روبیکا، واتساپ یا پیامک) بزنید — متن سفارش به صورت خودکار کپی می‌شود.","url":"https://sardarleather.netlify.app/#order"},
-    {"@type":"HowToStep","position":4,"name":"در پیام‌رسان بچسبانید","text":"در صفحه چت، متن را Paste کنید و دکمه ارسال را بزنید.","url":"https://sardarleather.netlify.app/#order"}
+    {"@type":"HowToStep","position":1,"name":"محصولات را ببینید","text":"گالری محصولات را مرور کنید و طرح‌های موردپسندتان را پیدا کنید.","url":"https://sardarleather.ir/#products"},
+    {"@type":"HowToStep","position":2,"name":"به سبد اضافه کنید","text":"روی دکمه «افزودن به سبد» کنار هر محصول بزنید، یا در فرم سفارش، محصول دلخواه خود را توضیح دهید.","url":"https://sardarleather.ir/#products"},
+    {"@type":"HowToStep","position":3,"name":"دکمه ثبت سفارش را بزنید","text":"اسم و شماره‌تان را وارد کنید و روی دکمه یکی از روش‌ها (روبیکا، واتساپ یا پیامک) بزنید — متن سفارش به صورت خودکار کپی می‌شود.","url":"https://sardarleather.ir/#order"},
+    {"@type":"HowToStep","position":4,"name":"در پیام‌رسان بچسبانید","text":"در صفحه چت، متن را Paste کنید و دکمه ارسال را بزنید.","url":"https://sardarleather.ir/#order"}
   ]
 }
 </script>
 
-<!-- FAQPage — MATCHED with visible FAQ content (SEO requirement) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -768,27 +624,26 @@
 }
 </script>
 
-<!-- WebPage with speakable -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://sardarleather.netlify.app/#webpage",
-  "url": "https://sardarleather.netlify.app/",
+  "@id": "https://sardarleather.ir/#webpage",
+  "url": "https://sardarleather.ir/",
   "name": "چرم سرداری | خرید کیف و کمربند چرم دست‌ساز الیگودرز",
   "description": "خرید مستقیم از کارگاه چرم دست‌ساز الیگودرز — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت با چرم طبیعی و دوخت دستی.",
   "inLanguage": "fa-IR",
-  "isPartOf": {"@id": "https://sardarleather.netlify.app/#website"},
-  "about": {"@id": "https://sardarleather.netlify.app/#store"},
-  "primaryImageOfPage": {"@type":"ImageObject","url":"https://sardarleather.netlify.app/images/og-cover.jpg"},
+  "isPartOf": {"@id": "https://sardarleather.ir/#website"},
+  "about": {"@id": "https://sardarleather.ir/#store"},
+  "primaryImageOfPage": {"@type":"ImageObject","url":"https://sardarleather.ir/images/og-cover.jpg"},
   "datePublished": "2020-01-01",
   "dateModified": "2025-01-20",
-  "breadcrumb": {"@id": "https://sardarleather.netlify.app/#breadcrumb"},
+  "breadcrumb": {"@id": "https://sardarleather.ir/#breadcrumb"},
   "speakable": {
     "@type": "SpeakableSpecification",
     "cssSelector": [".hero h1", ".sec-head h2", ".faq-summary"]
   },
-  "potentialAction": {"@type":"ReadAction","target": ["https://sardarleather.netlify.app/"]}
+  "potentialAction": {"@type":"ReadAction","target": ["https://sardarleather.ir/"]}
 }
 </script>
 
@@ -905,26 +760,24 @@
     </div>
   </div>
 </div>
-
 <div class="features">
   <div class="feature">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg>
-    <h4>چرم طبیعی</h4><p>با کیفیت و بادوام</p>
+    <h2>چرم طبیعی</h2><p>با کیفیت و بادوام</p>
   </div>
   <div class="feature">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M20 7H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1z"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-    <h4>تولید مستقیم</h4><p>بدون واسطه</p>
+    <h2>تولید مستقیم</h2><p>بدون واسطه</p>
   </div>
   <div class="feature">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
-    <h4>سفارش اختصاصی</h4><p>مطابق سلیقه شما</p>
+    <h2>سفارش اختصاصی</h2><p>مطابق سلیقه شما</p>
   </div>
   <div class="feature">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="1" y="6" width="15" height="12" rx="2"/><path d="M16 10h4l3 3v5h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
-    <h4>ارسال به سراسر کشور</h4><p>سریع و مطمئن</p>
+    <h2>ارسال به سراسر کشور</h2><p>سریع و مطمئن</p>
   </div>
 </div>
-
 <section id="categories">
   <div class="wrap">
     <div class="sec-head"><span>دسته‌بندی‌ها</span><h2>دنبال چه چیزی می‌گردید؟</h2></div>
@@ -951,28 +804,28 @@
       <h2>چطور سفارش دهیم؟</h2>
       <p>چهار قدم ساده تا رسیدن محصول چرمی دست‌ساز به دست شما.</p>
     </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">۱</div>
-        <h4>محصولات را ببینید</h4>
-        <p>گالری محصولات را مرور کنید و طرح‌های موردپسندتان را پیدا کنید.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">۲</div>
-        <h4>به سبد اضافه کنید</h4>
-        <p>روی دکمه «افزودن به سبد» کنار هر محصول بزنید، یا در فرم سفارش، محصول دلخواه خود را توضیح دهید.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">۳</div>
-        <h4>دکمه «ثبت سفارش» را بزنید</h4>
-        <p>اسم و شماره‌تان را وارد کنید و روی دکمه یکی از روش‌ها (روبیکا، واتساپ یا پیامک) بزنید — متن سفارش <strong style="color:var(--gold)">به صورت خودکار کپی</strong> می‌شود.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">۴</div>
-        <h4>در پیام‌رسان بچسبانید</h4>
-        <p>در صفحه چت، متن را <strong style="color:var(--gold)">Paste (بچسبانید)</strong> کنید و دکمه ارسال را بزنید. تمام!</p>
-      </div>
-    </div>
+   <div class="steps">
+  <div class="step">
+    <div class="step-num">۱</div>
+    <h3>محصولات را ببینید</h3>
+    <p>گالری محصولات را مرور کنید و طرح‌های موردپسندتان را پیدا کنید.</p>
+  </div>
+  <div class="step">
+    <div class="step-num">۲</div>
+    <h3>به سبد اضافه کنید</h3>
+    <p>روی دکمه «افزودن به سبد» کنار هر محصول بزنید، یا در فرم سفارش، محصول دلخواه خود را توضیح دهید.</p>
+  </div>
+  <div class="step">
+    <div class="step-num">۳</div>
+    <h3>دکمه «ثبت سفارش» را بزنید</h3>
+    <p>اسم و شماره‌تان را وارد کنید و روی دکمه یکی از روش‌ها (روبیکا، واتساپ یا پیامک) بزنید — متن سفارش <strong style="color:var(--gold)">به صورت خودکار کپی</strong> می‌شود.</p>
+  </div>
+  <div class="step">
+    <div class="step-num">۴</div>
+    <h3>در پیام‌رسان بچسبانید</h3>
+    <p>در صفحه چت، متن را <strong style="color:var(--gold)">Paste (بچسبانید)</strong> کنید و دکمه ارسال را بزنید. تمام!</p>
+  </div>
+</div>
 
     <div class="note-box">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
@@ -1094,28 +947,28 @@
 <section id="contact">
   <div class="wrap">
     <div class="sec-head"><span>ارتباط با ما</span><h2>ما را پیدا کنید</h2><p>برای سفارش، مشاوره یا سوال با ما در تماس باشید.</p></div>
-    <div class="contact-grid">
-      <a class="cbox" href="https://www.google.com/maps/search/?api=1&query=%D8%A7%D9%84%DB%8C%DA%AF%D9%88%D8%AF%D8%B1%D8%B2+%D9%BE%D8%A7%D8%B3%D8%A7%DA%98+%D8%B3%DB%8C%D9%86%D8%A7" target="_blank" rel="noopener noreferrer">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h4>آدرس</h4>
-        <p class="fa">الیگودرز، خیابان امام خمینی، پاساژ سینا، طبقه پایین، مغازه چرم سرداری</p>
-      </a>
-      <a class="cbox" href="tel:09384920926">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg></div>
-        <h4>تلفن</h4>
-        <p class="val">۰۹۳۸۴۹۲۰۹۲۶</p>
-      </a>
-      <a class="cbox" href="https://instagram.com/sardarleather" target="_blank" rel="noopener noreferrer">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
-        <h4>اینستاگرام</h4>
-        <p class="val">@sardarleather</p>
-      </a>
-      <a class="cbox" href="https://web.rubika.ir/#c=u0Re9B0f2d13ce18c468aa343b2fa757" target="_blank" rel="noopener noreferrer">
-        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-4-.9L3 20.5l1.5-4.5a8.4 8.4 0 0 1-1.5-4.5 8.4 8.4 0 0 1 9-8.4 8.5 8.5 0 0 1 9 8.4z"/></svg></div>
-        <h4>روبیکا</h4>
-        <p class="val">@sardarleather</p>
-      </a>
-    </div>
+  <div class="contact-grid">
+  <a class="cbox" href="https://www.google.com/maps/search/?api=1&query=%D8%A7%D9%84%DB%8C%DA%AF%D9%88%D8%AF%D8%B1%D8%B2+%D9%BE%D8%A7%D8%B3%D8%A7%DA%98+%D8%B3%DB%8C%D9%86%D8%A7" target="_blank" rel="noopener noreferrer">
+    <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+    <h3>آدرس</h3>
+    <p class="fa">الیگودرز، خیابان امام خمینی، پاساژ سینا، طبقه پایین، مغازه چرم سرداری</p>
+  </a>
+  <a class="cbox" href="tel:09384920926">
+    <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg></div>
+    <h3>تلفن</h3>
+    <p class="val">۰۹۳۸۴۹۲۰۹۲۶</p>
+  </a>
+  <a class="cbox" href="https://instagram.com/sardarleather" target="_blank" rel="noopener noreferrer">
+    <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+    <h3>اینستاگرام</h3>
+    <p class="val">@sardarleather</p>
+  </a>
+  <a class="cbox" href="https://web.rubika.ir/#c=u0Re9B0f2d13ce18c468aa343b2fa757" target="_blank" rel="noopener noreferrer">
+    <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-4-.9L3 20.5l1.5-4.5a8.4 8.4 0 0 1-1.5-4.5 8.4 8.4 0 0 1 9-8.4 8.5 8.5 0 0 1 9 8.4z"/></svg></div>
+    <h3>روبیکا</h3>
+    <p class="val">@sardarleather</p>
+  </a>
+</div>
   </div>
 </section>
 <section id="faq" class="faq-section">
@@ -1191,18 +1044,18 @@
         <p>تولید و فروش محصولات چرمی دست‌ساز — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت. تولید مستقیم از کارگاه الیگودرز.</p>
       </div>
       <div>
-        <h5>دسترسی سریع</h5>
+        <h3>دسترسی سریع</h3>
         <ul>
           <li><a href="#home">خانه</a></li>
           <li><a href="#products">محصولات</a></li>
           <li><a href="#order">ثبت سفارش</a></li>
-          <li><a href="#faq">سوالات پرتکرار</a></li>
           <li><a href="#about">درباره ما</a></li>
           <li><a href="#contact">تماس با ما</a></li>
+          <li><a href="#faq">سوالات پرتکرار</a></li>
         </ul>
       </div>
       <div>
-        <h5>تماس</h5>
+        <h3>تماس</h3>
         <ul>
           <li><a href="tel:09384920926">۰۹۳۸۴۹۲۰۹۲۶</a></li>
           <li><a href="https://instagram.com/sardarleather" target="_blank" rel="noopener noreferrer">اینستاگرام</a></li>
@@ -1213,9 +1066,8 @@
     <div class="copyright">© ۱۳۹۹ تا <span id="currentYear">۱۴۰۴</span> چرم سرداری — تمامی حقوق محفوظ است.</div>
   </div>
 </footer>
-
 <div class="overlay" id="overlay" onclick="closeDrawer()"></div>
-<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="سبد خرید" aria-hidden="true" inert>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="سبد خرید" aria-hidden="true" inert>
   <div class="drawer-head">
     <h3>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
@@ -1264,7 +1116,7 @@
       </button>
     </div>
   </div>
-</aside>
+</div>
 
 <div class="checkout-modal" id="checkoutModal" aria-hidden="true" inert>
   <div class="checkout-box" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
@@ -2010,18 +1862,15 @@ try {
     items.forEach(other => {
       if (other !== currentItem && other.open) {
         const oc = other.querySelector('.faq-content');
-
         if (reduceMotion || !oc) {
           other.open = false;
           return;
         }
-
         oc.style.height = oc.scrollHeight + 'px';
         oc.style.opacity = '1';
         void oc.offsetHeight;
         oc.style.height = '0px';
         oc.style.opacity = '0';
-
         setTimeout(() => {
           other.open = false;
           oc.style.height = '';
@@ -2055,7 +1904,6 @@ try {
         void content.offsetHeight;
         content.style.height = '0px';
         content.style.opacity = '0';
-
         setTimeout(() => {
           item.open = false;
           content.style.height = '';
@@ -2071,7 +1919,6 @@ try {
         void content.offsetHeight;
         content.style.height = targetHeight + 'px';
         content.style.opacity = '1';
-
         setTimeout(() => {
           content.style.height = '';
           content.style.opacity = '';
