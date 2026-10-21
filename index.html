@@ -976,17 +976,11 @@ html[data-theme="dark"]{ color-scheme: dark; }
 <script>
 (function(){
   try {
-    var KEY = 'sardar_theme';
-    var saved = null;
-    try { saved = localStorage.getItem(KEY); } catch(e){}
+    /* پاکسازی مقدار قدیمی که قبلاً در localStorage ذخیره می‌شد */
+    try { localStorage.removeItem('sardar_theme'); } catch(e){}
 
-    var theme;
-    if (saved === 'dark' || saved === 'light') {
-      theme = saved;
-    } else {
-      var h = new Date().getHours();
-      theme = (h >= 19 || h < 7) ? 'dark' : 'light';   /* ۱۹ شب تا ۷ صبح = تیره */
-    }
+    var h = new Date().getHours();
+    var theme = (h >= 19 || h < 7) ? 'dark' : 'light';   /* ۱۹ شب تا ۷ صبح = تیره */
 
     var root = document.documentElement;
     root.style.colorScheme = theme;
@@ -1536,11 +1530,13 @@ html[data-theme="dark"]{ color-scheme: dark; }
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-  /* ═══════════════════════════════════════════════════════════
-   THEME — حالت روشن/تیره (تشخیص خودکار بر اساس ساعت + کلید دستی)
+/* ═══════════════════════════════════════════════════════════
+   THEME — تشخیص خودکار بر اساس ساعت + کلید دستی (بدون ذخیره‌سازی)
    ═══════════════════════════════════════════════════════════ */
 
-function applyTheme(theme, persist){
+let _userToggledThisSession = false;   /* با رفرش ریست می‌شود */
+
+function applyTheme(theme){
   const root = document.documentElement;
   if (theme === 'dark') {
     root.setAttribute('data-theme', 'dark');
@@ -1554,17 +1550,6 @@ function applyTheme(theme, persist){
 
   const metaTheme = document.querySelector('meta[name="theme-color"]');
   if (metaTheme) metaTheme.setAttribute('content', theme === 'dark' ? '#1a120b' : '#40260f');
-
-  if (persist) {
-    try { localStorage.setItem('sardar_theme', theme); } catch (e) {}
-  }
-}
-
-function getSavedTheme(){
-  try {
-    const s = localStorage.getItem('sardar_theme');
-    return (s === 'dark' || s === 'light') ? s : null;
-  } catch (e) { return null; }
 }
 
 function getAutoTheme(){
@@ -1573,24 +1558,26 @@ function getAutoTheme(){
 }
 
 function toggleTheme(){
+  _userToggledThisSession = true;
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  applyTheme(isDark ? 'light' : 'dark', true);
+  applyTheme(isDark ? 'light' : 'dark');
 }
 
-/* سینک امن متاها با وضعیت فعلی (اسکریپت head باید قبلاً ست کرده باشد) */
+/* هم‌رنگ کردن متاها با وضعیت فعلی */
 (function syncThemeMeta(){
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  applyTheme(isDark ? 'dark' : 'light', false);
+  applyTheme(isDark ? 'dark' : 'light');
 })();
 
-/* تشخیص خودکار مجدد فقط وقتی کاربر دستی انتخاب نکرده باشد */
+/* بازبینی خودکار هنگام برگشتن به تب — فقط اگر کاربر دستی تغییر نداده باشد */
 document.addEventListener('visibilitychange', function(){
   if (document.visibilityState !== 'visible') return;
-  if (getSavedTheme()) return;          /* حالت دستی فعال است — دخالت نکن */
+  if (_userToggledThisSession) return;
+
   const auto = getAutoTheme();
   const currentDark = document.documentElement.getAttribute('data-theme') === 'dark';
   if ((auto === 'dark') !== currentDark) {
-    applyTheme(auto, false);
+    applyTheme(auto);
   }
 });
 /* ============ ثابت‌ها ============ */
