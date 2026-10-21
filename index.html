@@ -972,7 +972,38 @@ html[data-theme="dark"]{ color-scheme: dark; }
   "potentialAction": {"@type":"ReadAction","target": ["https://sardarleather.ir/"]}
 }
 </script>
+<!-- Theme bootstrap: تشخیص خودکار بر اساس ساعت — اجرا قبل از رندر بدنه -->
+<script>
+(function(){
+  try {
+    var KEY = 'sardar_theme';
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch(e){}
 
+    var theme;
+    if (saved === 'dark' || saved === 'light') {
+      theme = saved;
+    } else {
+      var h = new Date().getHours();
+      theme = (h >= 19 || h < 7) ? 'dark' : 'light';   /* ۱۹ شب تا ۷ صبح = تیره */
+    }
+
+    var root = document.documentElement;
+    root.style.colorScheme = theme;
+    if (theme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+    }
+    var metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (metaTheme) {
+      metaTheme.setAttribute('content', theme === 'dark' ? '#1a120b' : '#40260f');
+    }
+    var metaScheme = document.querySelector('meta[name="color-scheme"]');
+    if (metaScheme) {
+      metaScheme.setAttribute('content', theme === 'dark' ? 'dark light' : 'light dark');
+    }
+  } catch (e) {}
+})();
+</script>
 </head>
 <body>
 
@@ -1506,44 +1537,62 @@ html[data-theme="dark"]{ color-scheme: dark; }
 
 <script>
   /* ═══════════════════════════════════════════════════════════
-   THEME — حالت روشن/تیره
+   THEME — حالت روشن/تیره (تشخیص خودکار بر اساس ساعت + کلید دستی)
    ═══════════════════════════════════════════════════════════ */
-(function initTheme(){
-  const KEY = 'sardar_theme';
-  let saved = null;
-  try { saved = localStorage.getItem(KEY); } catch(e){}
-
-  let theme;
-  if(saved === 'dark' || saved === 'light'){
-    theme = saved;
-  } else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
-    theme = 'dark';
-  } else {
-    theme = 'light';
-  }
-  applyTheme(theme, false);
-})();
 
 function applyTheme(theme, persist){
-  const html = document.documentElement;
-  if(theme === 'dark'){
-    html.setAttribute('data-theme', 'dark');
+  const root = document.documentElement;
+  if (theme === 'dark') {
+    root.setAttribute('data-theme', 'dark');
   } else {
-    html.removeAttribute('data-theme');
+    root.removeAttribute('data-theme');
   }
+  root.style.colorScheme = theme;
+
   const metaScheme = document.querySelector('meta[name="color-scheme"]');
-  if(metaScheme) metaScheme.setAttribute('content', theme === 'dark' ? 'dark light' : 'light dark');
+  if (metaScheme) metaScheme.setAttribute('content', theme === 'dark' ? 'dark light' : 'light dark');
+
   const metaTheme = document.querySelector('meta[name="theme-color"]');
-  if(metaTheme) metaTheme.setAttribute('content', theme === 'dark' ? '#1a120b' : '#40260f');
-  if(persist){
-    try { localStorage.setItem('sardar_theme', theme); } catch(e){}
+  if (metaTheme) metaTheme.setAttribute('content', theme === 'dark' ? '#1a120b' : '#40260f');
+
+  if (persist) {
+    try { localStorage.setItem('sardar_theme', theme); } catch (e) {}
   }
+}
+
+function getSavedTheme(){
+  try {
+    const s = localStorage.getItem('sardar_theme');
+    return (s === 'dark' || s === 'light') ? s : null;
+  } catch (e) { return null; }
+}
+
+function getAutoTheme(){
+  const h = new Date().getHours();
+  return (h >= 19 || h < 7) ? 'dark' : 'light';
 }
 
 function toggleTheme(){
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   applyTheme(isDark ? 'light' : 'dark', true);
 }
+
+/* سینک امن متاها با وضعیت فعلی (اسکریپت head باید قبلاً ست کرده باشد) */
+(function syncThemeMeta(){
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  applyTheme(isDark ? 'dark' : 'light', false);
+})();
+
+/* تشخیص خودکار مجدد فقط وقتی کاربر دستی انتخاب نکرده باشد */
+document.addEventListener('visibilitychange', function(){
+  if (document.visibilityState !== 'visible') return;
+  if (getSavedTheme()) return;          /* حالت دستی فعال است — دخالت نکن */
+  const auto = getAutoTheme();
+  const currentDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if ((auto === 'dark') !== currentDark) {
+    applyTheme(auto, false);
+  }
+});
 /* ============ ثابت‌ها ============ */
 const RUBIKA_CHAT_LINK = 'https://web.rubika.ir/#c=u0Re9B0f2d13ce18c468aa343b2fa757';
 const WHATSAPP_NUMBER = '989384920926';
