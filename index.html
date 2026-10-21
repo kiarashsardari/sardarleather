@@ -11,7 +11,6 @@
      2. ساخت فایل‌های images/og-cover.jpg, logo.png, products/1-15.jpg
      3. ساخت robots.txt و sitemap.xml
      4. تأیید در Google Search Console و Bing
-     5. افزودن هدرهای امنیتی (_headers در Netlify یا .htaccess)
      6. به‌روزرسانی dateModified در Schema (WebPage)
      7. توصیه‌شده: self-host فونت Vazirmatn برای پایداری در ایران
      8. توصیه‌شده: تست نهایی Lighthouse + کیبورد-only + iOS/Android واقعی
@@ -980,7 +979,7 @@ html[data-theme="dark"]{ color-scheme: dark; }
   try {
     try { localStorage.removeItem('sardar_theme'); } catch(e){}
     var h = new Date().getHours();
-    var theme = (h >= 19 || h < 7) ? 'dark' : 'light';
+    var theme = (h >= 18 || h < 7) ? 'dark' : 'light';
     var root = document.documentElement;
     root.style.colorScheme = theme;
     if (theme === 'dark') {
@@ -1553,7 +1552,7 @@ function applyTheme(theme){
 
 function getAutoTheme(){
   const h = new Date().getHours();
-  return (h >= 19 || h < 7) ? 'dark' : 'light';
+  return (h >= 18 || h < 7) ? 'dark' : 'light';
 }
 
 function toggleTheme(){
@@ -1576,7 +1575,13 @@ document.addEventListener('visibilitychange', function(){
     applyTheme(auto);
   }
 });
-
+/* بررسی هر ۵ دقیقه — تغییر خودکار بدون نیاز به رفرش */
+setInterval(function(){
+  if (_userToggledThisSession) return;
+  const auto = getAutoTheme();
+  const currentDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if ((auto === 'dark') !== currentDark) applyTheme(auto);
+}, 5 * 60 * 1000);
 /* ============ ثابت‌ها ============ */
 const RUBIKA_CHAT_LINK = 'https://web.rubika.ir/#c=u0Re9B0f2d13ce18c468aa343b2fa757';
 const WHATSAPP_NUMBER = '989384920926';
