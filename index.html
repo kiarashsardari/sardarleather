@@ -192,7 +192,7 @@
   header{position:sticky;top:0;z-index:100;background:rgba(255,253,249,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav{display:grid;grid-template-columns:auto 1fr auto;align-items:center;height:72px;gap:24px}
   .logo{display:flex;align-items:center;gap:10px;color:var(--leather-dark);flex-shrink:0}
-  .logo-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#8b5a34,#4a2c18);display:grid;place-items:center;color:#f3e5d3;box-shadow:0 4px 14px rgba(74,44,24,.3);flex-shrink:0}
+  .logo-mark{width:30px;height:30px;border-radius:1200px;background:linear-gradient(135deg,#8b5a34,#4a2c18);display:grid;place-items:center;color:#f3e5d3;box-shadow:0 4px 14px rgba(74,44,24,.3);flex-shrink:0}
   .logo-text{display:flex;flex-direction:column;line-height:1.3}
   .logo-text strong{font-size:1.05rem;font-weight:800}
   .logo-text small{font-size:.68rem;font-weight:400;color:var(--muted);letter-spacing:1px}
@@ -232,8 +232,8 @@
 
   .hero-visual{position:relative;display:grid;place-items:center}
   .leather-disc{width:min(100%,420px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.14),transparent 42%),radial-gradient(circle at 70% 75%,rgba(0,0,0,.22),transparent 52%),linear-gradient(140deg,#8b5a34,#4a2c18);box-shadow:inset 0 0 0 2px rgba(255,255,255,.08),0 30px 70px rgba(64,38,15,.35);display:grid;place-items:center;position:relative}
-  .leather-disc::after{content:'';position:absolute;inset:22px;border-radius:50%;border:1.5px dashed rgba(243,229,211,.35)}
-  .leather-disc svg{width:44%;height:44%;color:#f0e0c9;opacity:.85}
+  .leather-disc::after{content:'';position:absolute;inset:21px;border-radius:50%;border:1.5px dashed rgba(243,229,211,.35)}
+  .leather-disc svg{width:100%;height:100%;color:#f0e0c9;opacity:.85}
   .float-tag{position:absolute;background:var(--paper);padding:12px 18px;border-radius:14px;box-shadow:0 10px 30px rgba(64,38,15,.15);font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:9px;color:var(--leather-dark)}
   .float-tag i{color:var(--gold)}
   .tag-1{top:8%;left:-4%}
@@ -1015,9 +1015,59 @@ html[data-theme="dark"]{ color-scheme: dark; }
   <div class="wrap nav">
     <a href="#home" class="logo" aria-label="چرم سرداری، صفحه اصلی">
       <div class="logo-mark">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
-          <path d="M8 9V7a4 4 0 0 1 8 0v2"/><rect x="4" y="9" width="16" height="11" rx="2.5"/>
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+  <!-- دایره چرم تیره -->
+  <circle cx="256" cy="256" r="248" fill="#4a2812"/>
+
+  <!-- دسته -->
+  <path d="M 194 206 C 194 148 218 120 256 120 C 294 120 318 148 318 206"
+        fill="none" stroke="#f5ebe0" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- بدنه کیسه -->
+  <rect x="136" y="200" width="240" height="190" rx="42" fill="#f5ebe0"/>
+
+  <!-- حاشیه کوک‌دار ظریف — نزدیک لبه، ریز، کم‌رنگ -->
+  <rect x="146" y="210" width="220" height="170" rx="34"
+        fill="none" stroke="#8b5a2b" stroke-width="2.5"
+        stroke-dasharray="5 6" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- درز زین‌دوزی — ۷ کوک X، از مرکز به سمت گوشه‌ها کوچک‌تر می‌شوند -->
+  <g stroke="#8b5a2b" stroke-linecap="round">
+
+    <!-- کوک مرکزی (بزرگ‌ترین) -->
+    <g stroke-width="7">
+      <line x1="247" y1="276" x2="265" y2="294"/>
+      <line x1="265" y1="276" x2="247" y2="294"/>
+    </g>
+
+    <!-- کوک‌های میانی -->
+    <g stroke-width="6.5">
+      <line x1="220" y1="277" x2="236" y2="293"/>
+      <line x1="236" y1="277" x2="220" y2="293"/>
+      <line x1="276" y1="277" x2="292" y2="293"/>
+      <line x1="292" y1="277" x2="276" y2="293"/>
+    </g>
+
+    <!-- کوک‌های بیرونی -->
+    <g stroke-width="6">
+      <line x1="193" y1="278" x2="207" y2="292"/>
+      <line x1="207" y1="278" x2="193" y2="292"/>
+      <line x1="305" y1="278" x2="319" y2="292"/>
+      <line x1="319" y1="278" x2="305" y2="292"/>
+    </g>
+
+    <!-- کوک‌های نزدیک گوشه (کوچک‌ترین) -->
+    <g stroke-width="5.5">
+      <line x1="166" y1="279" x2="178" y2="291"/>
+      <line x1="178" y1="279" x2="166" y2="291"/>
+      <line x1="334" y1="279" x2="346" y2="291"/>
+      <line x1="346" y1="279" x2="334" y2="291"/>
+    </g>
+
+  </g>
+
+</svg>
       </div>
       <div class="logo-text">
         <strong>چرم سرداری</strong>
@@ -1114,7 +1164,59 @@ html[data-theme="dark"]{ color-scheme: dark; }
     </div>
     <div class="hero-visual">
       <div class="leather-disc">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true" focusable="false"><path d="M8 9V7a4 4 0 0 1 8 0v2"/><rect x="4" y="9" width="16" height="11" rx="2.5"/><path d="M4 13h16" stroke-dasharray="2 2.5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+  <!-- دایره چرم تیره -->
+  <circle cx="256" cy="256" r="248" fill="#4a2812"/>
+
+  <!-- دسته -->
+  <path d="M 194 206 C 194 148 218 120 256 120 C 294 120 318 148 318 206"
+        fill="none" stroke="#f5ebe0" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- بدنه کیسه -->
+  <rect x="136" y="200" width="240" height="190" rx="42" fill="#f5ebe0"/>
+
+  <!-- حاشیه کوک‌دار ظریف — نزدیک لبه، ریز، کم‌رنگ -->
+  <rect x="146" y="210" width="220" height="170" rx="34"
+        fill="none" stroke="#8b5a2b" stroke-width="2.5"
+        stroke-dasharray="5 6" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- درز زین‌دوزی — ۷ کوک X، از مرکز به سمت گوشه‌ها کوچک‌تر می‌شوند -->
+  <g stroke="#8b5a2b" stroke-linecap="round">
+
+    <!-- کوک مرکزی (بزرگ‌ترین) -->
+    <g stroke-width="7">
+      <line x1="247" y1="276" x2="265" y2="294"/>
+      <line x1="265" y1="276" x2="247" y2="294"/>
+    </g>
+
+    <!-- کوک‌های میانی -->
+    <g stroke-width="6.5">
+      <line x1="220" y1="277" x2="236" y2="293"/>
+      <line x1="236" y1="277" x2="220" y2="293"/>
+      <line x1="276" y1="277" x2="292" y2="293"/>
+      <line x1="292" y1="277" x2="276" y2="293"/>
+    </g>
+
+    <!-- کوک‌های بیرونی -->
+    <g stroke-width="6">
+      <line x1="193" y1="278" x2="207" y2="292"/>
+      <line x1="207" y1="278" x2="193" y2="292"/>
+      <line x1="305" y1="278" x2="319" y2="292"/>
+      <line x1="319" y1="278" x2="305" y2="292"/>
+    </g>
+
+    <!-- کوک‌های نزدیک گوشه (کوچک‌ترین) -->
+    <g stroke-width="5.5">
+      <line x1="166" y1="279" x2="178" y2="291"/>
+      <line x1="178" y1="279" x2="166" y2="291"/>
+      <line x1="334" y1="279" x2="346" y2="291"/>
+      <line x1="346" y1="279" x2="334" y2="291"/>
+    </g>
+
+  </g>
+
+</svg>
       </div>
       <div class="float-tag tag-1"><i aria-hidden="true">✦</i> دوخت دستی</div>
       <div class="float-tag tag-2"><i aria-hidden="true">✦</i> سفارش اختصاصی</div>
@@ -1292,9 +1394,7 @@ html[data-theme="dark"]{ color-scheme: dark; }
 
 <section class="about" id="about">
   <div class="wrap about-inner">
-    <div class="about-art">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true" focusable="false"><path d="M8 9V7a4 4 0 0 1 8 0v2"/><rect x="4" y="9" width="16" height="11" rx="2.5"/><path d="M4 13h16" stroke-dasharray="2 2.5"/></svg>
-    </div>
+    
     <div>
       <h2>درباره چرم سرداری</h2>
       <p>کارگاه <strong>چرم سرداری</strong> در شهر الیگودرز، با عشق به هنر دست و اصالت چرم طبیعی فعالیت می‌کند. هر محصول از انتخاب چرم تا آخرین کوک دوخت، با دست و با دقت ساخته می‌شود.</p>
@@ -1403,7 +1503,59 @@ html[data-theme="dark"]{ color-scheme: dark; }
     <div class="foot-grid">
       <div>
         <div class="foot-logo">
-          <div class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M8 9V7a4 4 0 0 1 8 0v2"/><rect x="4" y="9" width="16" height="11" rx="2.5"/></svg></div>
+          <div class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+  <!-- دایره چرم تیره -->
+  <circle cx="256" cy="256" r="248" fill="#4a2812"/>
+
+  <!-- دسته -->
+  <path d="M 194 206 C 194 148 218 120 256 120 C 294 120 318 148 318 206"
+        fill="none" stroke="#f5ebe0" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- بدنه کیسه -->
+  <rect x="136" y="200" width="240" height="190" rx="42" fill="#f5ebe0"/>
+
+  <!-- حاشیه کوک‌دار ظریف — نزدیک لبه، ریز، کم‌رنگ -->
+  <rect x="146" y="210" width="220" height="170" rx="34"
+        fill="none" stroke="#8b5a2b" stroke-width="2.5"
+        stroke-dasharray="5 6" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- درز زین‌دوزی — ۷ کوک X، از مرکز به سمت گوشه‌ها کوچک‌تر می‌شوند -->
+  <g stroke="#8b5a2b" stroke-linecap="round">
+
+    <!-- کوک مرکزی (بزرگ‌ترین) -->
+    <g stroke-width="7">
+      <line x1="247" y1="276" x2="265" y2="294"/>
+      <line x1="265" y1="276" x2="247" y2="294"/>
+    </g>
+
+    <!-- کوک‌های میانی -->
+    <g stroke-width="6.5">
+      <line x1="220" y1="277" x2="236" y2="293"/>
+      <line x1="236" y1="277" x2="220" y2="293"/>
+      <line x1="276" y1="277" x2="292" y2="293"/>
+      <line x1="292" y1="277" x2="276" y2="293"/>
+    </g>
+
+    <!-- کوک‌های بیرونی -->
+    <g stroke-width="6">
+      <line x1="193" y1="278" x2="207" y2="292"/>
+      <line x1="207" y1="278" x2="193" y2="292"/>
+      <line x1="305" y1="278" x2="319" y2="292"/>
+      <line x1="319" y1="278" x2="305" y2="292"/>
+    </g>
+
+    <!-- کوک‌های نزدیک گوشه (کوچک‌ترین) -->
+    <g stroke-width="5.5">
+      <line x1="166" y1="279" x2="178" y2="291"/>
+      <line x1="178" y1="279" x2="166" y2="291"/>
+      <line x1="334" y1="279" x2="346" y2="291"/>
+      <line x1="346" y1="279" x2="334" y2="291"/>
+    </g>
+
+  </g>
+
+</svg></div>
           چرم سرداری
         </div>
         <p>تولید و فروش محصولات چرمی دست‌ساز — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت. تولید مستقیم از کارگاه الیگودرز.</p>
