@@ -910,33 +910,48 @@ html[data-theme="dark"]{ color-scheme: dark; }
 [data-theme="dark"] .theme-toggle .icon-sun{ display: block; }
 [data-theme="dark"] .theme-toggle .icon-moon{ display: none; }
 /* ═══════════════════════════════════════════════════════════
-   BAG SVG ICON — v4: centered scale + group-aligned translate
+   BAG SVG ICON — v6: square + rounded, small, symmetric
    ═══════════════════════════════════════════════════════════ */
 
-.logo-mark,
-.leather-disc {
+/* ─── ۱) مربع با گوشه‌های گرد (جای دایره) ─── */
+.logo-mark {
+  border-radius: 8px;
+  background: #4a2812;
   overflow: hidden;
 }
 
-/* ─── لوگوی کوچک ۳۰px ─── */
-.logo-mark svg {
-  width: 100%;
-  height: 100%;
-  transform: scale(1.16);
-  transform-origin: center center;
+.foot-logo .logo-mark {
+  background: linear-gradient(135deg, #b8894a, #7a4a2b);
 }
 
-/* حاشیه خط‌چین در ۳۰px نویزه — حذفش می‌کنیم */
+/* ─── ۲) پس‌زمینه‌ی دایره‌ای داخل SVG رو پنهان کن ─── */
+.logo-mark svg > circle {
+  display: none;
+}
+
+/* ─── ۳) حاشیه خط‌چین در ۳۰px نویزه ─── */
 .logo-mark svg rect[stroke-dasharray] {
   display: none;
 }
 
-/* کوک‌های X ضخیم‌تر */
-.logo-mark svg g[stroke] line {
-  stroke-width: 10;
+/* ─── ۴) کوچیک‌تر + متقارن (بدون هیچ translate) ─── */
+.logo-mark svg {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.82);
+  transform-origin: center center;
 }
 
-/* ─── دیسک چرمی هیرو ─── */
+/* ─── ۵) کوک‌های X ضخیم‌تر (جبران کوچیک شدن) ─── */
+.logo-mark svg g[stroke] line {
+  stroke-width: 13;
+}
+
+/* ═══ دیسک بزرگ هیرو — دست‌نخورده ═══ */
+.leather-disc {
+  overflow: hidden;
+}
+
 .leather-disc svg {
   width: 100%;
   height: 100%;
@@ -944,10 +959,6 @@ html[data-theme="dark"]{ color-scheme: dark; }
   transform-origin: center center;
 }
 
-/* ─── بالانس بصری — همه اجزای کیف با هم ───
-   فقط دایره پس‌زمینه جابجا نمی‌شه، بقیه (دسته + بدنه + خط‌چین + کوک‌ها)
-   به عنوان یک واحد به سمت بالا حرکت می‌کنن تا با هم تراز بمونن. */
-.logo-mark svg > :not(circle),
 .leather-disc svg > :not(circle) {
   transform: translateY(-18px);
 }
