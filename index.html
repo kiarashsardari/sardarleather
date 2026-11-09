@@ -909,6 +909,48 @@ html[data-theme="dark"]{ color-scheme: dark; }
 [data-theme="dark"] .theme-toggle:hover{ background: #4a3524; }
 [data-theme="dark"] .theme-toggle .icon-sun{ display: block; }
 [data-theme="dark"] .theme-toggle .icon-moon{ display: none; }
+/* ═══════════════════════════════════════════════════════════
+   BAG SVG ICON — v4: centered scale + group-aligned translate
+   ═══════════════════════════════════════════════════════════ */
+
+.logo-mark,
+.leather-disc {
+  overflow: hidden;
+}
+
+/* ─── لوگوی کوچک ۳۰px ─── */
+.logo-mark svg {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.16);
+  transform-origin: center center;
+}
+
+/* حاشیه خط‌چین در ۳۰px نویزه — حذفش می‌کنیم */
+.logo-mark svg rect[stroke-dasharray] {
+  display: none;
+}
+
+/* کوک‌های X ضخیم‌تر */
+.logo-mark svg g[stroke] line {
+  stroke-width: 10;
+}
+
+/* ─── دیسک چرمی هیرو ─── */
+.leather-disc svg {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.04);
+  transform-origin: center center;
+}
+
+/* ─── بالانس بصری — همه اجزای کیف با هم ───
+   فقط دایره پس‌زمینه جابجا نمی‌شه، بقیه (دسته + بدنه + خط‌چین + کوک‌ها)
+   به عنوان یک واحد به سمت بالا حرکت می‌کنن تا با هم تراز بمونن. */
+.logo-mark svg > :not(circle),
+.leather-disc svg > :not(circle) {
+  transform: translateY(-18px);
+}
 </style>
 
 <script type="application/ld+json">
