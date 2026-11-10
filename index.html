@@ -6,16 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>چرم سرداری | خرید کیف و کمربند چرم دست‌ساز الیگودرز</title>
 
-<!-- ═══════════════════════════════════════════════════════════
-     اقدامات لازم قبل از انتشار عمومی:
-     1. جایگزینی دامنه با دامنه واقعی
-     2. ساخت فایل‌های images/og-cover.jpg, logo.png, products/1-15.jpg
-     3. ساخت robots.txt و sitemap.xml
-     4. تأیید در Google Search Console و Bing
-     6. به‌روزرسانی dateModified در Schema (WebPage)
-     7. توصیه‌شده: self-host فونت Vazirmatn برای پایداری در ایران
-     8. توصیه‌شده: تست نهایی Lighthouse + کیبورد-only + iOS/Android واقعی
-     ═══════════════════════════════════════════════════════════ -->
 
 <meta name="description" content="چرم سرداری، کارگاه چرم دست‌ساز در الیگودرز — کیف، کمربند، کیف پول، جاکارتی، قاب گوشی و دسته ساعت با چرم طبیعی و دوخت دستی. تولید مستقیم، بدون واسطه، ارسال به سراسر کشور. سفارش از طریق روبیکا، واتساپ و پیامک.">
 <meta name="keywords" content="چرم دست‌ساز, کیف چرم, کمربند چرم, کیف پول چرم, جاکارتی چرم, قاب گوشی چرم, دسته ساعت چرم, چرم سرداری, الیگودرز, چرم طبیعی, خرید کیف چرم, خرید کمربند چرم">
@@ -964,6 +954,62 @@ html[data-theme="dark"]{ color-scheme: dark; }
 .leather-disc svg > :not(circle) {
   transform: translateY(-18px);
 }
+/* ─── اعتبار توسعه‌دهنده — استاندارد فوتر ─── */
+.developer-credit{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid rgba(243,229,211,.12);
+  font-size:.8rem;
+  color:#9a8468;
+  line-height:1.8;
+  text-align:center;
+}
+.developer-credit strong{
+  color:#d8c4a6;
+  font-weight:700;
+}
+.developer-credit a{
+  color:#d8c4a6;
+  text-decoration:none;
+  transition:color .2s;
+  direction:ltr;
+  unicode-bidi:isolate;
+}
+.developer-credit a:hover{
+  color:var(--gold);
+}
+.developer-credit .sep{
+  color:#6f5a44;
+}
+
+/* دارک مود */
+[data-theme="dark"] .developer-credit{
+  color:#7a6a55;
+  border-top-color:var(--line);
+}
+[data-theme="dark"] .developer-credit strong,
+[data-theme="dark"] .developer-credit a{
+  color:#a89478;
+}
+[data-theme="dark"] .developer-credit a:hover{
+  color:var(--gold);
+}
+
+/* موبایل */
+@media(max-width:520px){
+  .developer-credit{
+    flex-direction:column;
+    gap:2px;
+  }
+  .developer-credit .sep{
+    display:none;
+  }
+}
 </style>
 
 <script type="application/ld+json">
@@ -1590,7 +1636,12 @@ html[data-theme="dark"]{ color-scheme: dark; }
         </ul>
       </div>
     </div>
-    <div class="copyright">© ۱۳۹۹ تا <span id="currentYear">۱۴۰۴</span> چرم سرداری — تمامی حقوق محفوظ است.</div>
+    <div class="copyright">© ۱۳۹۴ تا <span id="currentYear">۱۴۰۴</span> چرم سرداری — تمامی حقوق محفوظ است.</div>
+    <div class="developer-credit">
+  <span>توسعه دهنده: <strong>کیارش سرداری</strong></span>
+  <span class="sep" aria-hidden="true">|</span>
+  <span>تماس: <a href="tel:+989165197630" aria-label="تماس با توسعه‌دهنده">۰۹۱۶۵۱۹۷۶۳۰</a></span>
+</div>
   </div>
 </footer>
 <div class="overlay" id="overlay" onclick="closeDrawer()"></div>
