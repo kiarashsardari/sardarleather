@@ -144,10 +144,10 @@
       "position": 1,
       "item": {
         "@type": "Product",
-        "name": "کیف دستی چرمی مشکی کد ۶۱۳",
+        "name": "کیف دستی چرم طبیعی",
         "category": "کیف",
         "sku": "SL-001",
-        "description": "دسته بلند \nابعاد ۲۳×۳۴",
+        "description": "کیف دستی چرم طبیعی — کیف",
         "image": "https://kiarashsardari.github.io/sardarleather/images/products/1.jpg",
         "material": "چرم طبیعی",
         "brand": {
@@ -1459,6 +1459,55 @@ html[data-theme="dark"]{ color-scheme: dark; }
     display:none;
   }
 }
+/* ═════ مودال جزئیات محصول ═════ */
+.product-modal{position:fixed;inset:0;background:rgba(42,31,23,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s;z-index:400}
+.product-modal.open{opacity:1;visibility:visible}
+.product-modal-box{position:relative;width:100%;max-width:800px;max-height:90vh;overflow-y:auto;background:var(--paper);border-radius:22px;box-shadow:0 30px 80px rgba(42,31,23,.4);transform:translateY(30px) scale(.95);opacity:0;transition:transform .4s cubic-bezier(.34,1.2,.64,1),opacity .35s ease}
+.product-modal.open .product-modal-box{transform:translateY(0) scale(1);opacity:1}
+.product-modal-close{position:absolute;top:14px;left:14px;z-index:10;width:38px;height:38px;border-radius:10px;background:rgba(255,253,249,.95);color:var(--leather-dark);display:grid;place-items:center;transition:.2s;cursor:pointer;border:none;box-shadow:0 4px 12px rgba(42,31,23,.15)}
+.product-modal-close:hover{background:#fff;transform:rotate(90deg)}
+.product-modal-close svg{width:18px;height:18px}
+.product-modal-grid{display:grid;grid-template-columns:1fr 1fr}
+.product-modal-img{aspect-ratio:1;background:radial-gradient(circle at 30% 28%,rgba(255,255,255,.12),transparent 45%),radial-gradient(circle at 72% 78%,rgba(0,0,0,.2),transparent 55%),linear-gradient(140deg,#8b5a34,#4a2c18);display:grid;place-items:center;position:relative;overflow:hidden;border-radius:22px 0 0 22px}
+.product-modal-img svg{width:45%;height:45%;color:#f0e0c9;opacity:.9;position:relative;z-index:0}
+.product-modal-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.product-modal-body{padding:32px 28px;display:flex;flex-direction:column;gap:14px;text-align:right}
+.pm-cat{font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:1px}
+.pm-name{font-size:1.25rem;font-weight:800;color:var(--leather-dark);line-height:1.5;margin:0}
+.pm-desc{font-size:.92rem;color:#5d4b3b;line-height:1.9;white-space:pre-line;border-block:1px dashed var(--line);padding:14px 0;min-height:60px;word-break:break-word}
+.pm-desc.empty{color:#b5a99b;font-style:italic;font-size:.86rem}
+.pm-price{font-size:1.1rem;font-weight:800;color:var(--leather-dark);display:flex;align-items:baseline;gap:6px}
+.pm-price small{font-size:.78rem;font-weight:500;color:var(--muted)}
+.pm-actions{margin-top:auto;padding-top:6px}
+.pm-add{width:100%;padding:14px;border-radius:12px;background:var(--leather-dark);color:#f3e5d3;font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center;gap:8px;border:none;cursor:pointer;font-family:inherit;transition:.2s}
+.pm-add:hover{background:#2b1a09;transform:translateY(-1px)}
+.pm-add svg{width:16px;height:16px}
+.pm-qty{display:flex;align-items:center;justify-content:space-between;background:var(--leather-dark);color:#f3e5d3;border-radius:12px;overflow:hidden;height:48px;padding:0 6px}
+.pm-qty button{background:transparent;color:#f3e5d3;width:48px;height:100%;display:grid;place-items:center;transition:.2s;border:none;cursor:pointer;border-radius:8px}
+.pm-qty button:hover{background:rgba(243,229,211,.15)}
+.pm-qty button svg{width:16px;height:16px}
+.pm-qty span{font-weight:800;font-size:.95rem;padding:0 12px}
+.card{cursor:pointer}
+
+@media(max-width:720px){
+  .product-modal-box{max-height:92vh}
+  .product-modal-grid{grid-template-columns:1fr}
+  .product-modal-img{border-radius:22px 22px 0 0;max-height:260px;aspect-ratio:auto}
+  .product-modal-body{padding:22px 20px}
+  .pm-name{font-size:1.1rem}
+}
+
+[data-theme="dark"] .product-modal-box{background:var(--paper)}
+[data-theme="dark"] .product-modal-close{background:rgba(36,24,17,.95);color:var(--leather-dark)}
+[data-theme="dark"] .product-modal-close:hover{background:#3d2a1d;color:var(--gold)}
+[data-theme="dark"] .pm-name{color:var(--leather-dark)}
+[data-theme="dark"] .pm-desc{color:var(--muted);border-color:var(--line)}
+[data-theme="dark"] .pm-price{color:var(--leather-dark)}
+[data-theme="dark"] .pm-add{background:var(--gold);color:#2a1f17}
+[data-theme="dark"] .pm-add:hover{background:#e8c58a}
+[data-theme="dark"] .pm-qty{background:var(--gold);color:#2a1f17}
+[data-theme="dark"] .pm-qty button{color:#2a1f17}
+[data-theme="dark"] .pm-qty button:hover{background:rgba(42,31,23,.15)}
 </style>
 
 <script type="application/ld+json">
@@ -2264,7 +2313,7 @@ const CATS = [
 ];
 
 const PRODUCTS = [
-  {id:1, name:'کیف دستی چرمی مشکی کد ۶۱۳', cat:'bag', price:2850000, img:'', desc:'دسته بلند \nابعاد ۲۳×۳۴'},
+  {id:1, name:'کیف دستی چرم طبیعی', cat:'bag', price:2850000, img:''},
   {id:2, name:'کمربند چرم دست‌دوز', cat:'belt', price:890000, img:''},
   {id:3, name:'کیف پول چرم مردانه', cat:'wallet', price:650000, img:''},
   {id:4, name:'جاکارتی چرم', cat:'card', price:320000, img:''},
@@ -2380,7 +2429,9 @@ function openExternal(url){
 function syncBodyOverflow(){
   const drawerOpen = document.getElementById('drawer').classList.contains('open');
   const modalOpen = document.getElementById('checkoutModal').classList.contains('open');
-  document.body.style.overflow = (drawerOpen || modalOpen) ? 'hidden' : '';
+  const pmEl = document.getElementById('productModal');
+  const productModalOpen = pmEl && pmEl.classList.contains('open');
+  document.body.style.overflow = (drawerOpen || modalOpen || productModalOpen) ? 'hidden' : '';
 }
 
 async function copyAndOpenRubika(text){
@@ -2479,19 +2530,19 @@ function filterBy(id){
 }
 
 function addBtnHTML(id){
-  return `<button class="add" onclick="addToCart(${id})" aria-label="افزودن به سبد">
+  return `<button class="add" onclick="event.stopPropagation();addToCart(${id})" aria-label="افزودن به سبد">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
     افزودن به سبد
   </button>`;
 }
 function qtyCtrlHTML(id, qty){
-  return `<div class="qty-ctrl">
-    <button onclick="incQty(${id})" aria-label="افزایش تعداد">
+  return `<div class="qty-ctrl" onclick="event.stopPropagation()">
+    <button onclick="event.stopPropagation();incQty(${id})" aria-label="افزایش تعداد">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
     </button>
     <span aria-live="polite">${fa(qty)}</span>
-    <button onclick="decQty(${id})" aria-label="کاهش تعداد">
+    <button onclick="event.stopPropagation();decQty(${id})" aria-label="کاهش تعداد">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/></svg>
     </button>
   </div>`;
@@ -2506,7 +2557,7 @@ function renderProducts(){
       ? `<img src="${p.img}" alt="${altText}" loading="lazy" decoding="async" onerror="this.remove()">`
       : '';
     return `
-    <div class="card" data-id="${p.id}">
+    <div class="card" data-id="${p.id}" onclick="openProductModal(${p.id})" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProductModal(${p.id})}" aria-label="مشاهده جزئیات ${p.name}">
       <div class="card-img">
         ${photo}
         ${qty > 0 ? `<span class="cart-badge" aria-hidden="true">${fa(qty)}</span>` : ''}
@@ -2523,7 +2574,6 @@ function renderProducts(){
     </div>`;
   }).join('');
 }
-
 function addToCart(id){
   cart[id] = (cart[id] || 0) + 1;
   saveCart(); updateCartUI(); updateCard(id);
@@ -2932,6 +2982,11 @@ menu.querySelectorAll('a').forEach(a=>{ a.addEventListener('click', closeMenu); 
 
 document.addEventListener('keydown', e=>{
   if(e.key !== 'Escape') return;
+  const pm = document.getElementById('productModal');
+  if(pm && pm.classList.contains('open')){
+    closeProductModal();
+    return;
+  }
   if(document.getElementById('checkoutModal').classList.contains('open')){
     closeCheckoutModal();
     return;
@@ -3043,7 +3098,126 @@ try {
     });
   });
 })();
-</script>
+/* ═════ مودال جزئیات محصول ═════ */
+let _lastFocusedProduct = null;
 
+function openProductModal(id){
+  const p = PRODUCTS.find(x => x.id == id);
+  if (!p) return;
+
+  _lastFocusedProduct = document.activeElement;
+
+  const imgBox = document.getElementById('pmImg');
+  if (p.img) {
+    const esc = String(p.name).replace(/"/g, '&quot;');
+    imgBox.innerHTML = `<img src="${p.img}" alt="${esc}" onerror="this.remove()">`;
+  } else {
+    imgBox.innerHTML = svg(catIcon(p.cat));
+  }
+
+  document.getElementById('pmCat').textContent = catName(p.cat);
+  document.getElementById('pmTitle').textContent = p.name;
+
+  const descEl = document.getElementById('pmDesc');
+  if (p.desc && String(p.desc).trim()) {
+    descEl.textContent = p.desc;
+    descEl.classList.remove('empty');
+  } else {
+    descEl.textContent = 'توضیحات تکمیلی برای این محصول ثبت نشده است.';
+    descEl.classList.add('empty');
+  }
+
+  document.getElementById('pmPrice').innerHTML =
+    `${fa(p.price)} <small>تومان</small>`;
+
+  updatePmActions(id);
+
+  const modal = document.getElementById('productModal');
+  modal.classList.add('open');
+  modal.removeAttribute('inert');
+  modal.setAttribute('aria-hidden', 'false');
+  syncBodyOverflow();
+
+  setTimeout(()=>{
+    const btn = modal.querySelector('.product-modal-close');
+    if (btn) btn.focus();
+  }, 100);
+}
+
+function updatePmActions(id){
+  const p = PRODUCTS.find(x => x.id == id);
+  if (!p) return;
+  const actionsEl = document.getElementById('pmActions');
+  const qty = cart[id] || 0;
+  if (qty > 0) {
+    actionsEl.innerHTML = `
+      <div class="pm-qty">
+        <button onclick="pmIncQty(${id})" aria-label="افزایش">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+        <span>${fa(qty)} عدد در سبد</span>
+        <button onclick="pmDecQty(${id})" aria-label="کاهش">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"/></svg>
+        </button>
+      </div>`;
+  } else {
+    actionsEl.innerHTML = `
+      <button class="pm-add" onclick="pmAddToCart(${id})">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        افزودن به سبد
+      </button>`;
+  }
+}
+
+function pmAddToCart(id){
+  addToCart(id);
+  updatePmActions(id);
+}
+
+function pmIncQty(id){
+  incQty(id);
+  updatePmActions(id);
+}
+
+function pmDecQty(id){
+  decQty(id);
+  const qty = cart[id] || 0;
+  if (qty === 0) {
+    closeProductModal();
+    return;
+  }
+  updatePmActions(id);
+}
+
+function closeProductModal(){
+  const modal = document.getElementById('productModal');
+  if (!modal.classList.contains('open')) return;
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  modal.setAttribute('inert', '');
+  syncBodyOverflow();
+  if (_lastFocusedProduct && typeof _lastFocusedProduct.focus === 'function') {
+    _lastFocusedProduct.focus();
+  }
+}
+</script>
+<!-- مودال جزئیات محصول -->
+<div class="product-modal" id="productModal" aria-hidden="true" inert onclick="if(event.target===this)closeProductModal()">
+  <div class="product-modal-box" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+    <button class="product-modal-close" onclick="closeProductModal()" aria-label="بستن">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="product-modal-grid">
+      <div class="product-modal-img" id="pmImg"></div>
+      <div class="product-modal-body">
+        <span class="pm-cat" id="pmCat"></span>
+        <h3 class="pm-name" id="pmTitle"></h3>
+        <div class="pm-desc" id="pmDesc"></div>
+        <div class="pm-price" id="pmPrice"></div>
+        <div class="pm-actions" id="pmActions"></div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
