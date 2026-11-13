@@ -137,7 +137,7 @@
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "محصولات چرم سرداری",
-  "numberOfItems": 9,
+  "numberOfItems": 10,
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -390,6 +390,35 @@
         "offers": {
           "@type": "Offer",
           "price": "240000",
+          "priceCurrency": "IRR",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://kiarashsardari.github.io/sardarleather/#products",
+          "seller": {
+            "@id": "https://kiarashsardari.github.io/sardarleather/#store"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "Product",
+        "name": "تست",
+        "category": "کیف پول",
+        "sku": "SL-021",
+        "description": "توضیحات",
+        "image": "https://kiarashsardari.github.io/sardarleather/images/products/21.jpg",
+        "material": "چرم طبیعی",
+        "brand": {
+          "@type": "Brand",
+          "name": "چرم سرداری"
+        },
+        "itemCondition": "https://schema.org/NewCondition",
+        "offers": {
+          "@type": "Offer",
+          "price": "1",
           "priceCurrency": "IRR",
           "priceValidUntil": "2026-12-31",
           "availability": "https://schema.org/InStock",
@@ -2616,7 +2645,8 @@ const PRODUCTS = [
   {id:17, name:'قاب گوشی گلکسی a32 مشکی کد ۱۲۸', cat:'phone', price:450000, img:'', desc:'رنگ: مشکی\nنوع چرم: گاوی\nگوشی: گلگسی a32\nدوردوخت ساده و زیبا'},
   {id:18, name:'کیف پول نسکافه‌ای طرح ابر کد ۷۲۱', cat:'wallet', price:560000, img:'', desc:'رنگ: نسکافه‌ای\nتعداد جیب ها: ۱۰ عدد\nجیب های زیپ دار: یک عدد\nنوع چرم: کروکودیل\nابعاد: ۲۰×۱۲'},
   {id:19, name:'جاسوئیچی مدل کاور کد ۱۴۴', cat:'keycover', price:200000, img:'', desc:'ابعاد: ۷×۵\nرنگ: قرمز\nنوع چرم: گوسفند'},
-  {id:20, name:'دستبند طرح عقاب تیره کد ۹۳۲', cat:'cat8', price:240000, img:'', desc:'دور مچ: ۱۲ تا ۲۰ سانت \nرنگ: قهوه‌ای سوخته\nطرح: عقاب فلزی\nنوع چرم: گاوی'}
+  {id:20, name:'دستبند طرح عقاب تیره کد ۹۳۲', cat:'cat8', price:240000, img:'', desc:'دور مچ: ۱۲ تا ۲۰ سانت \nرنگ: قهوه‌ای سوخته\nطرح: عقاب فلزی\nنوع چرم: گاوی'},
+  {id:21, name:'تست', cat:'wallet', price:1, img:'images/products/21.jpg', desc:'توضیحات'}
 ];
 
 const fa = n => n.toLocaleString('fa-IR');
