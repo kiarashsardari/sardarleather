@@ -350,11 +350,47 @@
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
 
 <style>
-  :root{
-    --cream:#f7f2ea; --paper:#fffdf9; --leather:#7a4a2b; --leather-dark:#40260f;
-    --ink:#2a1f17; --muted:#8a7868; --gold:#b8894a; --line:#e6dccd; --radius:16px;
-    --rubika:#9333ea; --whatsapp:#25D366; --sms:#3b82f6;
-  }
+  /* ═══ تغییر ۱: پالت اصلی — لایه‌بندی و رنگ‌های semantic اضافه شد ═══ */
+:root{
+  /* سطوح — سفید غالب، نه تان */
+  --cream:#f7f5f2;
+  --paper:#ffffff;
+  --line:#e8e5e0;
+  --line-strong:#d4d0c8;
+
+  /* برند */
+  --leather:#7a4a2b;
+  --leather-dark:#0f0d0b;
+  --leather-soft:#f8f3ec;
+
+  /* طلایی */
+  --gold:#c48932;
+  --gold-hover:#a57125;
+
+  /* اکسنت — پررنگ و زنده */
+  --accent:#d94f2a;
+  --accent-hover:#b93e1d;
+  --accent-soft:#fef2ed;
+
+  /* سبز */
+  --success:#16a34a;
+  --success-soft:#dcfce7;
+
+  /* آبی */
+  --info:#2563eb;
+  --info-soft:#dbeafe;
+
+  /* متن — مشکی خنثی با کنتراست بالا */
+  --ink:#0f0f0d;
+  --muted:#6b6b68;
+
+  /* شبکه‌های اجتماعی */
+  --rubika:#9333ea;
+  --whatsapp:#22c55e;
+  --sms:#3b82f6;
+
+  --radius:16px;
+}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   [id]{scroll-margin-top:84px}
@@ -847,20 +883,45 @@
 html{ background: var(--cream); color-scheme: light; }
 html[data-theme="dark"]{ color-scheme: dark; }
 
-/* متغیرهای دارک — تم چرمی/طلایی */
 [data-theme="dark"]{
-  --cream: #1a120b;
-  --paper: #241811;
-  --leather: #d4a373;
-  --leather-dark: #f3e5d3;
-  --ink: #f0e0c9;
-  --muted: #a89478;
-  --gold: #e0b775;
-  --line: #3d2a1d;
-  --rubika: #a855f7;
-  --sms: #60a5fa;
-}
+  /* سطوح — تمایز واضح بدن از کارت */
+  --cream:#0f0b07;
+  --paper:#1d1711;
+  --paper-alt:#231b13;
+  --line:#3d2a1d;
+  --line-strong:#54432f;
 
+  /* برند */
+  --leather:#d4a373;
+  --leather-dark:#f5e9d6;
+  --leather-soft:#2f2418;
+
+  /* طلایی */
+  --gold:#e5b665;
+  --gold-hover:#f0c47a;
+
+  /* اکسنت تراکوتا (روشن‌تر برای تاریکی) */
+  --accent:#e07a55;
+  --accent-hover:#e89175;
+  --accent-soft:#3d2118;
+
+  /* سبز (روشن‌تر) */
+  --success:#4ade80;
+  --success-soft:#1a3d28;
+
+  /* آبی (روشن‌تر) */
+  --info:#7ba7d9;
+  --info-soft:#1e2a38;
+
+  /* متن */
+  --ink:#efe2cc;
+  --muted:#a89478;
+
+  /* شبکه‌های اجتماعی */
+  --rubika:#a855f7;
+  --whatsapp:#4ade80;
+  --sms:#60a5fa;
+}
 /* بدنه و هدر */
 [data-theme="dark"] header{ background: rgba(26,18,11,.94); border-bottom-color: var(--line); }
 [data-theme="dark"] .logo-text small{ color: var(--muted); }
@@ -939,8 +1000,8 @@ html[data-theme="dark"]{ color-scheme: dark; }
 [data-theme="dark"] .note-box p{ color: #d4bce8; }
 [data-theme="dark"] .note-box b{ color: #c4a7e0; }
 
-/* بخش سفارش اختصاصی */
-[data-theme="dark"] .order-section{ background: linear-gradient(135deg, #241811, #3d2a1d); }
+/* ═══ تغییر ۳: گرادیان بخش سفارش در دارک ═══ */
+[data-theme="dark"] .order-section{ background: linear-gradient(135deg, #1d1711, #3d2a1d); }
 [data-theme="dark"] .order-section::before{
   background:
     radial-gradient(circle at 20% 20%, rgba(224,183,117,.2), transparent 50%),
@@ -1247,6 +1308,441 @@ html[data-theme="dark"]{ color-scheme: dark; }
 [data-theme="dark"] .pm-qty{background:var(--gold);color:#2a1f17}
 [data-theme="dark"] .pm-qty button{color:#2a1f17}
 [data-theme="dark"] .pm-qty button:hover{background:rgba(42,31,23,.15)}
+/* ═══════════════════════════════════════════════════════════
+   SHOP ENHANCEMENTS — رنگ‌های ثانویه برای فروشگاهی‌تر شدن
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── بج اعتماد هدر هیرو → سبز ─── */
+.badge { background: var(--success); color: #fff; font-weight: 700; }
+.badge span { background: #fff; }
+[data-theme="dark"] .badge { background: var(--success); color: #0a1f12; }
+[data-theme="dark"] .badge span { background: #0a1f12; }
+
+/* ─── کلمه تأکیدی هیرو → تراکوتا ─── */
+.hero h1 em { color: var(--accent); }
+
+/* ─── دکمه اصلی → تراکوتا ─── */
+.btn-primary { background: var(--accent); box-shadow: 0 8px 22px rgba(184,81,47,.3); }
+.btn-primary:hover { background: var(--accent-hover); }
+[data-theme="dark"] .btn-primary { background: var(--accent); color: #fff; }
+[data-theme="dark"] .btn-primary:hover { background: var(--accent-hover); }
+
+/* ─── آیکن‌های ویژگی → رنگ‌بندی متفاوت ─── */
+.feature:nth-child(1) svg { color: var(--success); }
+.feature:nth-child(2) svg { color: var(--accent); }
+.feature:nth-child(3) svg { color: var(--gold); }
+.feature:nth-child(4) svg { color: var(--info); }
+
+/* ─── دسته‌بندی محصول → پیل رنگی ─── */
+.card-cat {
+  display: inline-block;
+  background: var(--leather-soft);
+  color: var(--leather);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: .7rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+/* ─── قیمت → تراکوتا (چشم‌گیر) ─── */
+.price { color: var(--accent); }
+[data-theme="dark"] .price { color: var(--accent); }
+.price small { color: var(--muted); }
+
+/* ─── هاور افزودن به سبد → تراکوتا ─── */
+.add:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+[data-theme="dark"] .add:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+
+/* ─── عنوان بخش‌ها → اکسنت + خط زیرش ─── */
+.sec-head span { color: var(--accent); }
+.sec-head h2 { position: relative; }
+.sec-head h2::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+/* ─── شماره مراحل → گرادیان تراکوتا ─── */
+.step-num { background: linear-gradient(135deg, var(--accent), var(--accent-hover)); box-shadow: 0 4px 12px rgba(184,81,47,.25); }
+[data-theme="dark"] .step-num { background: linear-gradient(135deg, var(--accent), var(--accent-hover)); color: #fff; }
+
+/* ─── فیلتر فعال → تراکوتا ─── */
+.filter.active { background: var(--accent); border-color: var(--accent); }
+[data-theme="dark"] .filter.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ─── بج تعداد سبد روی کارت → تراکوتا ─── */
+.card-img .cart-badge { background: var(--accent); box-shadow: 0 4px 12px rgba(184,81,47,.4); }
+
+/* ─── هاور دسته‌بندی → تراکوتا ─── */
+.cat:hover { border-color: var(--accent); }
+[data-theme="dark"] .cat:hover { border-color: var(--accent); }
+
+/* ─── هیرو → گرادیان گرم‌تر با اکسنت ─── */
+.hero {
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(184,81,47,.12), transparent 55%),
+    radial-gradient(ellipse at 10% 100%, rgba(45,122,77,.06), transparent 50%),
+    var(--paper);
+}
+[data-theme="dark"] .hero {
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(224,122,85,.15), transparent 55%),
+    radial-gradient(ellipse at 10% 100%, rgba(74,222,128,.06), transparent 50%),
+    var(--paper);
+}
+
+/* ─── بج «موجود» روی کارت محصول ─── */
+.card-img::before {
+  content: "✓ موجود";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--success);
+  color: #fff;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: .66rem;
+  font-weight: 700;
+  z-index: 5;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(45,122,77,.35);
+}
+/* ═══════════════════════════════════════════════════════════
+   LIGHT MODE SHOP POLISH — حذف حس یکنواختی
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── هدر: سفید خالص با سایه واضح ─── */
+header{
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(26,20,16,.05);
+}
+
+/* ─── هیرو: گرادیان گرم که از بخش زیرش جدا می‌شه ─── */
+.hero{
+  background:
+    radial-gradient(ellipse at 85% 10%, rgba(194,65,12,.09), transparent 55%),
+    radial-gradient(ellipse at 15% 90%, rgba(196,137,50,.10), transparent 55%),
+    linear-gradient(180deg, #fdfcfa 0%, #f4f0e9 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+/* ─── تیترها: نزدیک به مشکی (نه قهوه‌ای) ─── */
+.hero h1,
+.sec-head h2,
+.card-name,
+.feature h3,
+.step h3,
+.about h2,
+.cbox h3{ color: var(--ink); }
+
+/* ─── نوار ویژگی‌ها: سلول‌های تمیز ─── */
+.features{ background: var(--line); border-block: 1px solid var(--line); }
+.feature{ background: var(--paper); }
+
+/* ─── کارت دسته‌بندی: پاپ با آیکن رنگی ─── */
+.cat{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 3px rgba(26,20,16,.03);
+  transition: .25s;
+}
+.cat svg{ color: var(--accent); transition: .25s; }
+.cat:hover{
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(194,65,12,.12);
+}
+.cat:hover svg{ color: var(--accent-hover); }
+
+/* ─── کارت محصول: سایه در حالت عادی، برجسته در هاور ─── */
+.card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(26,20,16,.04);
+  transition: .28s;
+}
+.card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(26,20,16,.12), 0 4px 12px rgba(26,20,16,.06);
+  border-color: var(--line-strong);
+}
+
+/* ─── پیل دسته‌بندی روی کارت: تراکوتا ─── */
+.card-cat{
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: .72rem;
+  font-weight: 700;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* ─── دکمه افزودن به سبد: هاور قوی ─── */
+.add{
+  background: var(--leather-soft);
+  color: var(--leather-dark);
+  border: 1.5px solid transparent;
+  transition: .22s;
+}
+.add:hover{
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ─── فیلترها: فعال = تراکوتا پررنگ ─── */
+.filter{
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  color: var(--muted);
+  box-shadow: 0 1px 2px rgba(26,20,16,.03);
+}
+.filter:hover{ border-color: var(--accent); color: var(--accent); }
+.filter.active{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(194,65,12,.25);
+}
+
+/* ─── مرحله‌ها ─── */
+.step{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(26,20,16,.03);
+}
+.step:hover{
+  border-color: var(--accent);
+  box-shadow: 0 12px 28px rgba(194,65,12,.10);
+}
+
+/* ─── عنوان بخش‌ها: خط تراکوتا زیر ─── */
+.sec-head h2::after{
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+/* ─── باکس تماس ─── */
+.cbox{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(26,20,16,.03);
+}
+.cbox:hover{
+  border-color: var(--accent);
+  box-shadow: 0 14px 32px rgba(194,65,12,.10);
+}
+.cbox .ico{ background: var(--accent-soft); color: var(--accent); }
+
+/* ─── FAQ ─── */
+.faq-item{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 3px rgba(26,20,16,.03);
+}
+.faq-item:hover{ border-color: var(--line-strong); }
+.faq-item[open]{
+  border-color: var(--accent);
+  box-shadow: 0 6px 24px rgba(194,65,12,.10);
+}
+
+/* ─── چک‌مارک‌های «درباره ما»: سبز ─── */
+.about li i{ background: var(--success-soft); color: var(--success); }
+
+/* ─── دکمه «ثبت سفارش» منو + سبد خرید: تراکوتا ─── */
+.menu-list a.hot{ background: var(--accent); color: #fff; }
+.menu-list a.hot:hover{ background: var(--accent-hover); }
+.cart-btn{ background: var(--accent); color: #fff; }
+.cart-btn:hover{ background: var(--accent-hover); }
+.cart-count{ background: #fff; color: var(--accent); }
+
+/* ─── منوی موبایل ─── */
+@media(max-width:960px){
+  .menu{
+    background: var(--paper);
+    border-right: 1px solid var(--line);
+    box-shadow: 12px 0 40px rgba(26,20,16,.10);
+  }
+  .menu-list a{ color: var(--ink); border-bottom: 1px solid var(--line); }
+  .menu-list a:hover{ background: var(--accent-soft); color: var(--accent); }
+  .menu-list a svg{ color: var(--accent); }
+  .menu-list a.hot{ background: var(--accent); color: #fff; }
+  .menu-list a.hot:hover{ background: var(--accent-hover); }
+}
+/* ═══════════════════════════════════════════════════════════
+   LIGHT MODE STORE POLISH — فقط لایت مود
+   ═══════════════════════════════════════════════════════════ */
+
+/* هدر — سفید خالص + سایه */
+html:not([data-theme="dark"]) header{
+  background:#ffffff;
+  box-shadow:0 1px 3px rgba(15,15,13,.06);
+  border-bottom:1px solid var(--line);
+}
+
+/* هیرو — گرادیان روشن که از بخش زیرش جدا می‌شه */
+html:not([data-theme="dark"]) .hero{
+  background:
+    radial-gradient(ellipse at 85% 10%, rgba(217,79,42,.07), transparent 55%),
+    radial-gradient(ellipse at 15% 90%, rgba(196,137,50,.08), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f7f5f2 100%);
+  border-bottom:1px solid var(--line);
+}
+
+/* بخش محصولات — پس‌زمینه‌ی متمایز */
+html:not([data-theme="dark"]) #products{
+  background:#fafaf9;
+  border-block:1px solid var(--line);
+}
+
+/* کارت‌ها — سفید + سایه واقعی (پاپ) */
+html:not([data-theme="dark"]) .card,
+html:not([data-theme="dark"]) .cat,
+html:not([data-theme="dark"]) .step,
+html:not([data-theme="dark"]) .cbox,
+html:not([data-theme="dark"]) .faq-item{
+  background:#ffffff;
+  border:1px solid var(--line);
+  box-shadow:0 1px 3px rgba(15,15,13,.06), 0 1px 2px rgba(15,15,13,.04);
+}
+html:not([data-theme="dark"]) .card:hover,
+html:not([data-theme="dark"]) .cat:hover,
+html:not([data-theme="dark"]) .step:hover,
+html:not([data-theme="dark"]) .cbox:hover{
+  border-color:var(--line-strong);
+  box-shadow:0 10px 25px rgba(15,15,13,.08), 0 4px 10px rgba(15,15,13,.05);
+}
+
+/* تیترها — مشکی خنثی */
+html:not([data-theme="dark"]) .hero h1,
+html:not([data-theme="dark"]) .sec-head h2,
+html:not([data-theme="dark"]) .card-name,
+html:not([data-theme="dark"]) .feature h3,
+html:not([data-theme="dark"]) .step h3,
+html:not([data-theme="dark"]) .about h2,
+html:not([data-theme="dark"]) .cbox h3,
+html:not([data-theme="dark"]) .faq-summary,
+html:not([data-theme="dark"]) .drawer-head h3,
+html:not([data-theme="dark"]) .pm-name,
+html:not([data-theme="dark"]) .checkout-header h3{
+  color:var(--ink);
+}
+
+/* دکمه اصلی — تراکوتای زنده */
+html:not([data-theme="dark"]) .btn-primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 4px 14px rgba(217,79,42,.25);
+}
+html:not([data-theme="dark"]) .btn-primary:hover{
+  background:var(--accent-hover);
+  box-shadow:0 6px 20px rgba(217,79,42,.35);
+}
+
+/* سبد خرید + منوی داغ */
+html:not([data-theme="dark"]) .cart-btn{
+  background:var(--accent); color:#fff;
+  box-shadow:0 2px 8px rgba(217,79,42,.2);
+}
+html:not([data-theme="dark"]) .cart-btn:hover{ background:var(--accent-hover); }
+html:not([data-theme="dark"]) .cart-count{ background:#fff; color:var(--accent); font-weight:800; }
+html:not([data-theme="dark"]) .menu-list a.hot{ background:var(--accent); color:#fff; }
+html:not([data-theme="dark"]) .menu-list a.hot:hover{ background:var(--accent-hover); }
+
+/* قیمت — تراکوتا */
+html:not([data-theme="dark"]) .price{ color:var(--accent); }
+
+/* پیل دسته‌بندی روی کارت */
+html:not([data-theme="dark"]) .card-cat{
+  background:var(--accent-soft);
+  color:var(--accent);
+  padding:3px 10px; border-radius:20px;
+  display:inline-block; width:fit-content;
+}
+
+/* دکمه افزودن به سبد — سفید، هاور تراکوتا */
+html:not([data-theme="dark"]) .add{
+  background:#fff; color:var(--ink);
+  border:1.5px solid var(--line-strong);
+}
+html:not([data-theme="dark"]) .add:hover{
+  background:var(--accent); color:#fff; border-color:var(--accent);
+}
+
+/* فیلترها */
+html:not([data-theme="dark"]) .filter{
+  background:#fff; border:1.5px solid var(--line); color:var(--muted);
+}
+html:not([data-theme="dark"]) .filter:hover{ border-color:var(--accent); color:var(--accent); }
+html:not([data-theme="dark"]) .filter.active{
+  background:var(--accent); border-color:var(--accent); color:#fff;
+  box-shadow:0 4px 12px rgba(217,79,42,.25);
+}
+
+/* دسته‌بندی — آیکن تراکوتا، هاور رنگی */
+html:not([data-theme="dark"]) .cat svg{ color:var(--accent); }
+html:not([data-theme="dark"]) .cat:hover{ border-color:var(--accent); background:var(--accent-soft); }
+html:not([data-theme="dark"]) .cat:hover svg{ color:var(--accent-hover); }
+
+/* آیکن‌های ویژگی — رنگ‌بندی متفاوت */
+html:not([data-theme="dark"]) .feature:nth-child(1) svg{ color:var(--success); }
+html:not([data-theme="dark"]) .feature:nth-child(2) svg{ color:var(--accent); }
+html:not([data-theme="dark"]) .feature:nth-child(3) svg{ color:var(--gold); }
+html:not([data-theme="dark"]) .feature:nth-child(4) svg{ color:var(--info); }
+
+/* عنوان بخش — خط تراکوتا زیرش */
+html:not([data-theme="dark"]) .sec-head span{ color:var(--accent); }
+html:not([data-theme="dark"]) .sec-head h2::after{
+  content:''; display:block; width:48px; height:3px;
+  background:var(--accent); border-radius:2px;
+  margin:12px auto 0;
+}
+
+/* شماره مرحله — تراکوتا */
+html:not([data-theme="dark"]) .step-num{
+  background:var(--accent); color:#fff;
+}
+
+/* آیکن‌های تماس */
+html:not([data-theme="dark"]) .cbox .ico{
+  background:var(--accent-soft); color:var(--accent);
+}
+
+/* چک‌مارک درباره ما — سبز */
+html:not([data-theme="dark"]) .about li i{
+  background:var(--success-soft); color:var(--success);
+}
+
+/* FAQ باز شده */
+html:not([data-theme="dark"]) .faq-item[open]{
+  border-color:var(--accent);
+  box-shadow:0 6px 24px rgba(217,79,42,.10);
+}
+
+/* دکمه بستن drawer */
+html:not([data-theme="dark"]) .close-x{
+  background:var(--accent-soft); color:var(--accent);
+}
+html:not([data-theme="dark"]) .close-x:hover{
+  background:var(--accent); color:#fff;
+}
+
+/* فوتر — همون قهوه‌ای گرم برند، دست‌نخورده */
 </style>
 
 <script type="application/ld+json">
@@ -2047,7 +2543,7 @@ const CATS = [
   {id:'wallet', name:'کیف پول', icon:'<rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M16 12h3"/><path d="M3 10h18" stroke-dasharray="2 2"/>'},
   {id:'phone', name:'قاب گوشی', icon:'<rect x="7" y="2" width="10" height="20" rx="2.5"/><circle cx="12" cy="18" r=".9"/>'},
   {id:'card', name:'جاکارتی', icon:'<rect x="2" y="6" width="20" height="12" rx="2.5"/><circle cx="8" cy="12" r="2"/><path d="M13 10h6M13 14h4"/>'},
-  {id:'watch', name:'جاکلیدی', icon:'<circle cx="12" cy="12" r="4.5"/><path d="M9 8V3h6v5M9 16v5h6v-5"/>'},
+  {id:'watch', name:'جاکلیدی', icon:'<circle cx="12" cy="5.5" r="2.5"/><path d="M12 8v10.5"/><path d="M12 13h3"/><path d="M12 16.5h2"/>'},
   {id:'other', name:'سایر', icon:'<circle cx="5" cy="12" r="1.8" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.8" fill="currentColor" stroke="none"/>'}
 ];
 
