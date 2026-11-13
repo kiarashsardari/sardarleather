@@ -137,7 +137,7 @@
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "محصولات چرم سرداری",
-  "numberOfItems": 8,
+  "numberOfItems": 9,
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -361,6 +361,35 @@
         "offers": {
           "@type": "Offer",
           "price": "200000",
+          "priceCurrency": "IRR",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://kiarashsardari.github.io/sardarleather/#products",
+          "seller": {
+            "@id": "https://kiarashsardari.github.io/sardarleather/#store"
+          }
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "Product",
+        "name": "دستبند طرح عقاب تیره کد ۹۳۲",
+        "category": "دستبند",
+        "sku": "SL-020",
+        "description": "دور مچ: ۱۲ تا ۲۰ سانت \nرنگ: قهوه‌ای سوخته\nطرح: عقاب فلزی\nنوع چرم: گاوی",
+        "image": "https://kiarashsardari.github.io/sardarleather/images/products/20.jpg",
+        "material": "چرم طبیعی",
+        "brand": {
+          "@type": "Brand",
+          "name": "چرم سرداری"
+        },
+        "itemCondition": "https://schema.org/NewCondition",
+        "offers": {
+          "@type": "Offer",
+          "price": "240000",
           "priceCurrency": "IRR",
           "priceValidUntil": "2026-12-31",
           "availability": "https://schema.org/InStock",
@@ -2575,7 +2604,7 @@ const CATS = [
   {id:'card', name:'جاکارتی', icon:'<rect x="2" y="6" width="20" height="12" rx="2.5"/><circle cx="8" cy="12" r="2"/><path d="M13 10h6M13 14h4"/>'},
   {id:'keycover', name:'جاکلیدی', icon:'<circle cx="12" cy="5.5" r="2.5"/><path d="M12 8v10.5"/><path d="M12 13h3"/><path d="M12 16.5h2"/>'},
   {id:'other', name:'سایر', icon:'<circle cx="5" cy="12" r="1.8" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.8" fill="currentColor" stroke="none"/>'},
-  {id:'cat8', name:'دستبند', icon:'<circle cx="12" cy="12" r="4.5"/><path d="M9 8V3h6v5M9 16v5h6v-5"/>\'}'}
+  {id:'cat8', name:'دستبند', icon:''}
 ];
 
 const PRODUCTS = [
@@ -2586,7 +2615,8 @@ const PRODUCTS = [
   {id:16, name:'کمربند زنانه قهوه‌ای کد ۳۴۴', cat:'belt', price:700000, img:'', desc:'نوع چرم: بزی\nسایز: ۳۲\nرنگ: قهوه ای کمرنگ\nسگک طلایی'},
   {id:17, name:'قاب گوشی گلکسی a32 مشکی کد ۱۲۸', cat:'phone', price:450000, img:'', desc:'رنگ: مشکی\nنوع چرم: گاوی\nگوشی: گلگسی a32\nدوردوخت ساده و زیبا'},
   {id:18, name:'کیف پول نسکافه‌ای طرح ابر کد ۷۲۱', cat:'wallet', price:560000, img:'', desc:'رنگ: نسکافه‌ای\nتعداد جیب ها: ۱۰ عدد\nجیب های زیپ دار: یک عدد\nنوع چرم: کروکودیل\nابعاد: ۲۰×۱۲'},
-  {id:19, name:'جاسوئیچی مدل کاور کد ۱۴۴', cat:'keycover', price:200000, img:'', desc:'ابعاد: ۷×۵\nرنگ: قرمز\nنوع چرم: گوسفند'}
+  {id:19, name:'جاسوئیچی مدل کاور کد ۱۴۴', cat:'keycover', price:200000, img:'', desc:'ابعاد: ۷×۵\nرنگ: قرمز\nنوع چرم: گوسفند'},
+  {id:20, name:'دستبند طرح عقاب تیره کد ۹۳۲', cat:'cat8', price:240000, img:'', desc:'دور مچ: ۱۲ تا ۲۰ سانت \nرنگ: قهوه‌ای سوخته\nطرح: عقاب فلزی\nنوع چرم: گاوی'}
 ];
 
 const fa = n => n.toLocaleString('fa-IR');
